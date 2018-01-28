@@ -1,0 +1,184 @@
+@import url("https://fonts.googleapis.com/css?family=Muli");
+.landing {
+  overflow: hidden;
+  width: 100vw;
+  height: 100vh;
+  display: grid;
+  grid-template-rows: 40% 20% 40%;
+  grid-template-columns: 50% 50%; }
+
+.teacher-demo, .student-demo {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center; }
+  .teacher-demo button, .student-demo button {
+    width: 40%;
+    height: 30%;
+    background-color: paleturquoise;
+    border: solid black 1px;
+    border-radius: 10px;
+    color: white;
+    font-size: 2rem;
+    font-family: Muli;
+    text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000; }
+
+.teacher-demo {
+  grid-row: 1/2;
+  grid-column: 1/2;
+  background-image: url("../landing/teacher.jpg"); }
+
+.student-demo {
+  grid-row: 1/2;
+  grid-column: 2/3;
+  background-image: url("../landing/student.jpg"); }
+
+.logo {
+  grid-row: 2/3;
+  grid-column: 1/3;
+  background-color: gray;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center; }
+  .logo h1 {
+    font-size: 3rem;
+    color: white;
+    font-family: Muli;
+    text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000; }
+  .logo img {
+    height: 100%;
+    width: auto;
+    margin: 0rem 5rem; }
+
+.about {
+  grid-row: 3/4;
+  grid-column: 1/3;
+  background-color: paleturquoise;
+  display: grid;
+  grid-template-columns: 33.33% 33.33% 33.33%;
+  grid-template-rows: 100%; }
+  .about .smartgoals-image, .about .smartgoals-info {
+    grid-row: 1/2;
+    grid-column: 1/2;
+    width: 100%;
+    height: 100%; }
+  .about .datatracking-image, .about .datatracking-info {
+    grid-row: 1/2;
+    grid-column: 2/3;
+    width: 100%;
+    height: 100%; }
+  .about .future-image, .about .future-info {
+    grid-row: 1/2;
+    grid-column: 3/4;
+    width: 100%;
+    height: 100%; }
+
+.smartgoals-image, .datatracking-image, .future-image {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border: solid gray 5px; }
+  .smartgoals-image img, .datatracking-image img, .future-image img {
+    width: 70%;
+    height: 60%;
+    cursor: pointer; }
+
+.smartgoals-info, .datatracking-info, .future-info {
+  display: none;
+  grid-template-columns: 100%;
+  grid-template-rows: 20% 80%;
+  border: solid gray 5px; }
+  .smartgoals-info h1, .datatracking-info h1, .future-info h1 {
+    grid-row: 1/2;
+    grid-column: 1/2;
+    font-size: 3rem;
+    font-family: Muli;
+    color: #4c4c4c;
+    border: solid gray 5px;
+    text-align: center;
+    padding-top: 1rem;
+    width: 100%;
+    height: 100%;
+    justify-self: center;
+    align-self: center;
+    cursor: pointer; }
+  .smartgoals-info ul, .datatracking-info ul, .future-info ul {
+    grid-row: 2/3;
+    grid-column: 1/2;
+    cursor: pointer;
+    justify-self: center;
+    align-self: center; }
+    .smartgoals-info ul li, .datatracking-info ul li, .future-info ul li {
+      font-size: 1rem;
+      font-family: Muli;
+      color: #4c4c4c; }
+
+.ReactModal__Overlay {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center; }
+
+.modal {
+  width: 30%;
+  height: 40%;
+  background-color: #d7f6f6;
+  border: solid gray 1px;
+  border-radius: 2px;
+  display: grid;
+  grid-template-columns: 100%;
+  grid-template-rows: 10% 20% 40% 20% 10%; }
+  .modal img {
+    grid-row: 1/2;
+    grid-column: 1/2;
+    height: 80%;
+    margin: .3rem .3rem 0 0;
+    justify-self: end; }
+  .modal h2 {
+    grid-row: 2/3;
+    grid-column: 1/2;
+    justify-self: center;
+    font-size: 2rem;
+    font-family: Muli; }
+  .modal form {
+    grid-row: 3/4;
+    grid-column: 1/2;
+    justify-self: center;
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; }
+    .modal form label, .modal form input {
+      text-align: center;
+      font-size: 1.5rem;
+      width: 100%;
+      height: 2rem;
+      font-family: Muli; }
+  .modal a {
+    grid-row: 4/5;
+    grid-column: 1/2;
+    width: 80%;
+    height: 2rem;
+    text-decoration: none;
+    text-align: center;
+    font-size: 1.5rem;
+    font-family: Muli;
+    color: white;
+    background-color: gray;
+    border: solid #4c4c4c 1px;
+    justify-self: center;
+    align-self: center; }
+  .modal p {
+    grid-row: 5/6;
+    grid-column: 1/2;
+    color: red;
+    justify-self: center;
+    align-self: center; }
+
+/*# sourceMappingURL=main.css.map */

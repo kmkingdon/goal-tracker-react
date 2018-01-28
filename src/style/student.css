@@ -1,0 +1,254 @@
+@import url("https://fonts.googleapis.com/css?family=Muli");
+.student {
+  width: 100vw;
+  height: 100vh;
+  box-sizing: border-box;
+  display: grid;
+  grid-template-rows: 17% 83%;
+  grid-template-columns: 25% 75%; }
+  .student .header {
+    grid-row: 1/2;
+    grid-column: 1/3;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    background-color: gray; }
+    .student .header a {
+      height: 100%;
+      width: auto;
+      text-align: center; }
+      .student .header a img {
+        height: 100%; }
+
+#logo {
+  margin-left: 5rem; }
+
+#logout {
+  font-size: 1.3rem;
+  color: black;
+  font-family: Muli;
+  margin-right: 5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center; }
+
+.dashboard {
+  grid-row: 2/3;
+  grid-column: 1/2;
+  background-color: #bfbfbf;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center; }
+  .dashboard img {
+    width: 50%;
+    height: auto;
+    margin-top: 2rem; }
+  .dashboard h1 {
+    font-size: 1.5rem;
+    font-family: Muli;
+    margin-top: 1rem;
+    color: #4c4c4c; }
+  .dashboard button {
+    width: 50%;
+    height: 4rem;
+    margin-top: 1rem;
+    border: solid gray 1px;
+    background-color: paleturquoise;
+    color: gray;
+    font-family: Muli;
+    font-size: 1rem; }
+
+.display {
+  grid-row: 2/3;
+  grid-column: 2/3;
+  background-color: paleturquoise; }
+
+.see-assignments {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center; }
+  .see-assignments h1 {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    font-size: 2rem;
+    font-family: Muli;
+    color: #4c4c4c; }
+  .see-assignments .assignment-container {
+    width: 90%;
+    height: 55vh;
+    background-color: #d7f6f6;
+    border: solid #4c4c4c 3px;
+    overflow: scroll; }
+    .see-assignments .assignment-container .assignment-object, .see-assignments .assignment-container .assignment-header {
+      width: 100%;
+      height: 3rem;
+      border: solid #4c4c4c 1px;
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center; }
+      .see-assignments .assignment-container .assignment-object h1, .see-assignments .assignment-container .assignment-object h2, .see-assignments .assignment-container .assignment-object h3, .see-assignments .assignment-container .assignment-object h4, .see-assignments .assignment-container .assignment-object h5, .see-assignments .assignment-container .assignment-object h6, .see-assignments .assignment-container .assignment-object p, .see-assignments .assignment-container .assignment-object button, .see-assignments .assignment-container .assignment-header h1, .see-assignments .assignment-container .assignment-header h2, .see-assignments .assignment-container .assignment-header h3, .see-assignments .assignment-container .assignment-header h4, .see-assignments .assignment-container .assignment-header h5, .see-assignments .assignment-container .assignment-header h6, .see-assignments .assignment-container .assignment-header p, .see-assignments .assignment-container .assignment-header button {
+        font-size: 1rem;
+        font-family: Muli;
+        text-align: center;
+        border: solid #4c4c4c 1px;
+        height: 100%; }
+      .see-assignments .assignment-container .assignment-object h1, .see-assignments .assignment-container .assignment-header h1 {
+        width: 8%;
+        color: black;
+        background-color: #bfbfbf; }
+      .see-assignments .assignment-container .assignment-object h2, .see-assignments .assignment-container .assignment-header h2 {
+        width: 20%;
+        background-color: #d7f6f6; }
+      .see-assignments .assignment-container .assignment-object h3, .see-assignments .assignment-container .assignment-header h3 {
+        width: 20%;
+        background-color: #bfbfbf; }
+      .see-assignments .assignment-container .assignment-object h4, .see-assignments .assignment-container .assignment-header h4 {
+        width: 20%;
+        background-color: #d7f6f6; }
+      .see-assignments .assignment-container .assignment-object h5, .see-assignments .assignment-container .assignment-header h5 {
+        width: 8%;
+        background-color: #bfbfbf; }
+      .see-assignments .assignment-container .assignment-object h6, .see-assignments .assignment-container .assignment-header h6 {
+        width: 8%;
+        background-color: #d7f6f6; }
+      .see-assignments .assignment-container .assignment-object p, .see-assignments .assignment-container .assignment-header p {
+        width: 8%;
+        background-color: #bfbfbf; }
+      .see-assignments .assignment-container .assignment-object button, .see-assignments .assignment-container .assignment-header button {
+        width: 8%;
+        background-color: #d7f6f6; }
+    .see-assignments .assignment-container .assignment-header {
+      font-weight: bold;
+      color: white; }
+      .see-assignments .assignment-container .assignment-header h1 {
+        color: white;
+        background-color: gray;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center; }
+      .see-assignments .assignment-container .assignment-header h2 {
+        background-color: teal;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center; }
+      .see-assignments .assignment-container .assignment-header h3 {
+        background-color: gray;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center; }
+      .see-assignments .assignment-container .assignment-header h4 {
+        background-color: teal;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center; }
+      .see-assignments .assignment-container .assignment-header h5 {
+        background-color: gray;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center; }
+      .see-assignments .assignment-container .assignment-header h6 {
+        background-color: teal;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center; }
+      .see-assignments .assignment-container .assignment-header p {
+        background-color: gray;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center; }
+      .see-assignments .assignment-container .assignment-header button {
+        color: white;
+        background-color: teal;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center; }
+
+.assignment-key {
+  height: 10vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center; }
+  .assignment-key img {
+    margin-top: 3rem;
+    width: 40%;
+    height: auto; }
+
+.ReactModal__Overlay {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center; }
+
+.modal-edit {
+  width: 50%;
+  height: 70%;
+  background-color: #d7f6f6;
+  border: solid gray 1px;
+  border-radius: 2px;
+  display: grid;
+  grid-template-columns: 100%;
+  grid-template-rows: 10% 10% 70% 10%; }
+  .modal-edit img {
+    grid-row: 1/2;
+    grid-column: 1/2;
+    height: 80%;
+    margin: .3rem .3rem 0 0;
+    justify-self: end; }
+  .modal-edit h2 {
+    grid-row: 2/3;
+    grid-column: 1/2;
+    font-size: 2rem;
+    font-family: Muli;
+    justify-self: center;
+    align-self: center; }
+  .modal-edit form {
+    grid-row: 3/4;
+    grid-column: 1/2;
+    justify-self: center;
+    align-self: center;
+    width: 90%; }
+    .modal-edit form label, .modal-edit form input, .modal-edit form select, .modal-edit form option {
+      width: 100%;
+      height: 1.5rem;
+      font-size: 1rem;
+      font-family: Muli; }
+    .modal-edit form label {
+      margin-top: .5rem; }
+    .modal-edit form #submit {
+      margin-top: 1rem;
+      height: 2rem;
+      color: white;
+      background-color: teal; }
+  .modal-edit button {
+    grid-row: 4/5;
+    grid-column: 1/2;
+    justify-self: center;
+    align-self: center;
+    width: 40%;
+    height: 2rem;
+    background-color: red;
+    color: white; }
+
+.hidden {
+  display: none; }
+
+/*# sourceMappingURL=student.scss.map */
+
+/*# sourceMappingURL=student.css.map */
