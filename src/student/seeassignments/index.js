@@ -15,6 +15,7 @@ class SeeAssignments extends React.Component {
     };
     this.handleClickEdit= this.handleClickEdit.bind(this);
     this.closeModal= this.closeModal.bind(this);
+    this.colorFinal= this.colorFinal.bind(this);
   }
 
   componentDidMount() {
@@ -31,6 +32,24 @@ class SeeAssignments extends React.Component {
 
   closeModal() {
     this.setState({modalIsOpen: false});
+  }
+
+  colorFinal() {
+    let pArray = document.querySelectorAll('.final');
+
+    pArray.forEach(p => {
+      if(p.innerHTML.split('%')[0] >= 90){
+        p.style.backgroundColor = "rgb(0, 153, 255)";
+      } else if(p.innerHTML.split('%')[0] >= 80 && p.innerHTML.split('%')[0] < 90){
+        p.style.backgroundColor = "rgb(0, 204, 102)";
+      } else if(p.innerHTML.split('%')[0] >= 70 && p.innerHTML.split('%')[0] < 80){
+        p.style.backgroundColor = "rgb(255, 255, 102)";
+      } else if(p.innerHTML.split('%')[0] >= 60 && p.innerHTML.split('%')[0] < 70){
+        p.style.backgroundColor = "rgb(255, 153, 51)";
+      } else if(p.innerHTML.split('%')[0] <= 59){
+        p.style.backgroundColor = "rgb(255, 80, 80)";
+      }
+    });
   }
 
 
@@ -50,7 +69,7 @@ class SeeAssignments extends React.Component {
               <p>Final Grade</p>
               <button>Edit</button>
             </div>
-            {this.props.assignments.map(a => <AssignmentObject key={a.name} assignment={a} handleClick={this.handleClickEdit} /> )}
+            {this.props.assignments.map(a => <AssignmentObject key={a.name} assignment={a} handleClick={this.handleClickEdit} finalColor={this.colorFinal}/> )}
           </div>
           <div className="assignment-key">
             <img src="./assets/gradekey.jpg" alt="gradekey"/>

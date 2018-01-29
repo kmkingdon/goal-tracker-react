@@ -4,8 +4,8 @@ import '../style/student.css';
 import Header from '../header.js'
 import AddAssignments from './addassignments/index.js';
 import SeeAssignments from './seeassignments/index.js';
-import Data from './data';
-import Goals from './goals';
+import Data from './data/index';
+import Goals from './goals/index';
 
 
 class Student extends React.Component {
@@ -119,8 +119,8 @@ class Student extends React.Component {
         <div className="display">
           <SeeAssignments assignments={this.state.assignments} updateData={this.updateData} />
           <AddAssignments />
-          <Goals/>
-          <Data/>
+          <Goals assignments={this.state.assignments} goals={this.state.goals}/>
+          <Data assignments={this.state.assignments}/>
         </div>
       </div>
     )
