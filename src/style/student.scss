@@ -282,6 +282,100 @@ $dark-grey: rgb(76,76,76);
   }
 }
 
+.add-assignments {
+  @include fill;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  h1 {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    font-size: 2rem;
+    font-family: Muli;
+    color: $dark-grey;
+  }
+  p {
+    font-size: 1rem;
+    font-family: Muli;
+    color: $dark-grey;
+  }
+}
+
+.add-form-container {
+  width: 90%;
+  height: 60%;
+  display: grid;
+  grid-template-columns: 20% 20% 20% 20% 20%;
+  grid-template-rows: 15% 85%;
+  #col1row1 {
+    grid-row: 1/2;
+    grid-column: 1/2;
+    @include fill;
+    text-align: center;
+    @include grid-center;
+  }
+  #col2row1 {
+    grid-row: 1/2;
+    grid-column: 2/3;
+    @include fill;
+    text-align: center;
+    @include grid-center;
+  }
+  #col3row1 {
+    grid-row: 1/2;
+    grid-column: 3/4;
+    @include fill;
+    text-align: center;
+    @include grid-center;
+  }
+  #col4row1 {
+    grid-row: 1/2;
+    grid-column: 4/5;
+    @include fill;
+    text-align: center;
+    @include grid-center;
+  }
+  #col5row1 {
+    grid-row: 1/2;
+    grid-column: 5/6;
+    @include fill;
+    text-align: center;
+    @include grid-center;
+  }
+  form {
+    grid-row: 2/3;
+    grid-column: 1/6;
+    margin-top: 1rem;
+    @include fill;
+    display: grid;
+    grid-template-columns: 20% 20% 20% 20% 20%;
+    grid-template-rows: 20% 20% 20% 20% 20%;
+    input, select {
+      height: 3rem;
+      font-size: 1rem;
+      font-family: Muli;
+    }
+    #submit {
+      grid-row: 6/7;
+      grid-column: 1/6;
+      width: 80%;
+      @include grid-center;
+      height: 3rem;
+      background-color: teal;
+      color: white;
+      font-size: 1.5rem;
+    }
+  }
+}
+
+#confirmation {
+  background-color: transparent;
+  margin-top: 5rem;
+  font-size: 1.5rem;
+  color: white;
+}
+
 .hidden {
   display:none;
 }
