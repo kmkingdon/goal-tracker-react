@@ -9,13 +9,13 @@ const AssignmentObject= (props)=> {
 
   return (
     <div className="assignment-object">
-      <h1>{props.assignment.id}</h1>
+      <h1>{props.assignment.number}</h1>
       <h2>{props.assignment.name}</h2>
       <h3>{props.assignment.type}</h3>
       <h4>{date}</h4>
       <h5>{props.assignment.pointsPossible}</h5>
       <h6>{props.assignment.pointsEarned}</h6>
-      <p className="final">{percentage}%</p>
+      <p className="final">{percentage.toFixed(0)}%</p>
       <button id={props.assignment.id} onClick={props.handleClick}>Edit</button>
     </div>
   );

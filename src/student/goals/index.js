@@ -1,5 +1,7 @@
 import React from 'react';
 import GoalButton from './goalbutton';
+import AddGoal from './addgoal';
+import GoalView from './goalview';
 import Classwork from '../data/classwork';
 import Homework from '../data/homework';
 import Projects from '../data/projects';
@@ -10,65 +12,48 @@ class Goals extends React.Component {
   constructor(props){
     super(props);
     this.state= {
-      goalId:0
+      dataView:'',
+      goalView:''
     };
-    this.handleClick = this.handleClick.bind(this);
-    this.showGoal = this.showGoal.bind(this);
+    this.setDataView = this.setDataView.bind(this);
+    this.setGoalView = this.setGoalView.bind(this);
+    this.setDataPreview = this.setDataPreview.bind(this);
   }
 
-  handleClick(e) {
-    this.setState({goalId:e.target.id});
-
-    let classwork = document.getElementById('classwork');
-    let homework = document.getElementById('homework');
-    let projects = document.getElementById('projects');
-    let assessments = document.getElementById('assessments');
-
-    const elementArray= [ classwork, homework, projects, assessments];
-    elementArray.forEach(element => {
-      if(element.classList.contains('hidden') === false) {
-        element.classList.add('hidden');
-      }
-    })
-
-    let currentData = e.target.innerHTML.toLowerCase();
-    let currentGraph = document.getElementById(currentData);
-    currentGraph.classList.remove('hidden');
-
-    this.showGoal()
+  setDataView(viewName) {
+    this.setState({dataView: viewName});
   }
 
-  showGoal() {
-    let goalData= [];
-    this.props.goals.forEach(goal => {
-      console.log(goal.id);
-      console.log(this.state.goalId);
-      if(goal.id === this.state.goalId) {
-        goalData.push(goal);
-      }
-    })
-    console.log(goalData);
+  setGoalView(viewName) {
+    this.setState({goalView: viewName});
   }
+
+  setDataPreview(event) {
+    this.setState({dataView: event.target.value });
+  }
+
 
   render() {
     return (
-      <div id="goals" className="hidden">
+      <div id="goals" className={(this.props.active ? ' ' : 'hidden')}>
         <div className="goals-container">
           <div className= "goals-dashboard" >
             <h1> Smart Goals </h1>
             <div className="current-goals">
               <h2> Current Goals:</h2>
-              {this.props.goals.map(goal => <GoalButton key={goal.id} goal={goal} handleClick={this.handleClick}/>)}
+              {this.props.goals.map(goal => <GoalButton key={goal.id} goal={goal} setDataView={this.setDataView} setGoalView={this.setGoalView}/>)}
             </div>
-            <button id="add">Add Goal </button>
+            <button onClick={() => {this.setDataView(''); this.setGoalView('add')}} id="add">Add Goal </button>
           </div>
           <div className= "goal-view">
+            {this.props.goals.map(goal => <GoalView deleteGoal={this.props.deleteGoal} key={goal.id} goal={goal} active={this.state.goalView === goal.id} saveReflection={this.props.saveReflection}/>)}
+            <AddGoal saveGoal={this.props.saveGoal} setDataPreview={this.setDataPreview} active={this.state.goalView === "add"}/>
           </div>
           <div className= "data">
-            <Classwork assignments={this.props.assignments}/>
-            <Homework assignments={this.props.assignments}/>
-            <Projects assignments={this.props.assignments}/>
-            <Assessments assignments={this.props.assignments} />
+            <Classwork assignments={this.props.assignments} active={this.state.dataView === 'Classwork'}/>
+            <Homework assignments={this.props.assignments} active={this.state.dataView === 'Homework'}/>
+            <Projects assignments={this.props.assignments} active={this.state.dataView === 'Projects'}/>
+            <Assessments assignments={this.props.assignments} active={this.state.dataView === 'Assessments'}/>
           </div>
         </div>
       </div>

@@ -20,7 +20,7 @@ class Data extends React.Component {
 
   render() {
     return (
-      <div id="data" className="hidden">
+      <div id="data" className={(this.props.active ? ' ' : 'hidden')}>
         <div className="data-container">
           <h1> Data Trends </h1>
           <div className="data-buttons">

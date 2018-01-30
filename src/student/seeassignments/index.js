@@ -10,11 +10,7 @@ class SeeAssignments extends React.Component {
   constructor(props){
     super(props);
     this.state= {
-      modalIsOpen: false,
-      assignmentData: [],
     };
-    this.handleClickEdit= this.handleClickEdit.bind(this);
-    this.closeModal= this.closeModal.bind(this);
     this.colorFinal= this.colorFinal.bind(this);
   }
 
@@ -22,17 +18,6 @@ class SeeAssignments extends React.Component {
     Modal.setAppElement(".see-assignments");
   }
 
-  handleClickEdit(e) {
-    this.setState({modalIsOpen: true});
-    let assignmentAPI = 'https://goaltrackerdb.herokuapp.com/assignments/'+ e.target.id;
-    fetch(assignmentAPI)
-      .then(response => response.json())
-      .then(response => this.setState({assignmentData:response.student}));
-  }
-
-  closeModal() {
-    this.setState({modalIsOpen: false});
-  }
 
   colorFinal() {
     let pArray = document.querySelectorAll('.final');
@@ -55,7 +40,7 @@ class SeeAssignments extends React.Component {
 
   render() {
     return (
-      <div id="see" >
+      <div id="see" className={(this.props.active ? ' ' : 'hidden')}>
         <div className="see-assignments">
           <h1> Assignment Log </h1>
           <div className="assignment-container">
@@ -69,13 +54,13 @@ class SeeAssignments extends React.Component {
               <p>Final Grade</p>
               <button>Edit</button>
             </div>
-            {this.props.assignments.map(a => <AssignmentObject key={a.name} assignment={a} handleClick={this.handleClickEdit} finalColor={this.colorFinal}/> )}
+            {this.props.assignments.map(a => <AssignmentObject key={a.name} assignment={a} handleClick={this.props.handleClickEdit} finalColor={this.colorFinal}/> )}
           </div>
           <div className="assignment-key">
             <img src="./assets/gradekey.jpg" alt="gradekey"/>
           </div>
         </div>
-        <ModalEdit openModal={this.handleClickEdit} closeModal={this.closeModal} modalIsOpen={this.state.modalIsOpen} assignmentData={this.state.assignmentData} updateData={this.props.updateData}/>
+        <ModalEdit deleteAssignment={this.props.deleteAssignment} handleSubmit={this.props.handleSubmit} openModal={this.props.handleClickEdit} closeModal={this.props.closeModal} modalIsOpen={this.props.modalIsOpen} assignmentData={this.props.assignmentData}/>
       </div>
     )
   }

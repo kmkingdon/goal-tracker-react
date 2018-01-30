@@ -4,12 +4,14 @@ const AddForm= (props)=> {
 
   return (
     <div className="add-form-container">
-      <p id="col1row1"> Assignment Name </p>
-      <p id="col2row1"> Assignment Type </p>
-      <p id="col3row1"> Due Date </p>
-      <p id="col4row1"> Points Possible </p>
-      <p id="col5row1"> Points Earned </p>
+      <p id="col1row1"> Assignment Number </p>
+      <p id="col2row1"> Assignment Name </p>
+      <p id="col3row1"> Assignment Type </p>
+      <p id="col4row1"> Due Date </p>
+      <p id="col5row1"> Points Possible </p>
+      <p id="col6row1"> Points Earned </p>
       <form onSubmit={props.handleSubmit}>
+        <input  type="number" name="number1" />
         <input  type="text" name="name1" />
         <select  name="type1">
           <option value="">Select a Type</option>
@@ -22,7 +24,7 @@ const AddForm= (props)=> {
         <input  type="number" name="pointsPossible1" />
         <input  type="number" name="pointsEarned1" />
 
-
+        <input  type="number" name="number2" />
         <input  type="text" name="name2" />
         <select  name="type2">
           <option value="">Select a Type</option>
@@ -35,7 +37,7 @@ const AddForm= (props)=> {
         <input  type="number" name="pointsPossible2" />
         <input  type="number" name="pointsEarned2" />
 
-
+        <input  type="number" name="number3" />
         <input  type="text" name="name3" />
         <select  name="type3">
           <option value="">Select a Type</option>
@@ -48,7 +50,7 @@ const AddForm= (props)=> {
         <input  type="number" name="pointsPossible3" />
         <input  type="number" name="pointsEarned3" />
 
-
+        <input  type="number" name="number4" />
         <input  type="text" name="name4" />
         <select  name="type4">
           <option value="">Select a Type</option>
@@ -61,7 +63,7 @@ const AddForm= (props)=> {
         <input  type="number" name="pointsPossible4" />
         <input  type="number" name="pointsEarned4" />
 
-
+        <input  type="number" name="number5" />
         <input  type="text" name="name5" />
         <select  name="type5">
           <option value="">Select a Type</option>

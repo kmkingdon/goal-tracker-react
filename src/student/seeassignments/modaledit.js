@@ -2,72 +2,28 @@ import React from 'react';
 import Modal from 'react-modal';
 
 
-class ModalEdit extends React.Component {
-  constructor (props) {
-    super(props);
-    this.state= {
-    }
-    this.handleSubmit = this.handleSubmit.bind(this);
-    this.deleteAssignment= this.deleteAssignment.bind(this);
-  }
+const ModalEdit = (props)=> {
 
-  handleSubmit(e){
-    e.preventDefault();
-    const update = new FormData(e.target);
-    const assignment = {
-      name: update.get("name"),
-      type: update.get("type"),
-      dueDate: update.get("dueDate"),
-      pointsPossible: update.get("pointsPossible"),
-      pointsEarned: update.get("pointsEarned"),
-      students_id: 1
-    };
 
-    let putAPI = "https://goaltrackerdb.herokuapp.com/assignments/" + this.props.assignmentData.id;
-    fetch(putAPI, {
-      method: "PUT",
-      body: JSON.stringify(assignment),
-      headers: new Headers({
-        "Content-Type": "application/json"
-      })
-    })
-      .then(response => response.json())
-      .catch(error => console.error("Error:", error))
-      .then(response => console.log("Success:", response))
-      .then(this.props.updateData())
-      .then(this.props.closeModal());
-  }
-
-  deleteAssignment() {
-    let deleteAPI = "https://goaltrackerdb.herokuapp.com/assignments/" + this.props.assignmentData.id;
-    fetch(deleteAPI, {
-      method: "DELETE",
-      })
-      .then(response => response.json())
-      .catch(error => console.error("Error:", error))
-      .then(response => console.log("Success:", response))
-      .then(this.props.updateData())
-      .then(this.props.closeModal());
-  }
-
-  render() {
     return (
       <Modal
-        isOpen={this.props.modalIsOpen}
-        onRequestClose={this.props.closeModal}
+        isOpen={props.modalIsOpen}
+        onRequestClose={props.closeModal}
         className={{
           base: 'modal-edit'
         }}
         contentLabel="Edit Assignment"
         >
           <h2>Edit Assignment</h2>
-          <img src="./assets/close.png" alt="close" onClick={this.props.closeModal}/>
-          <form onSubmit={this.handleSubmit}>
+          <img src="./assets/close.png" alt="close" onClick={(event)=>{props.closeModal(event)}}/>
+          <form onSubmit={(event, id)=>{props.handleSubmit(event, props.assignmentData.id)}}>
+          <label htmlFor="number"> Assignment Number </label>
+          <input name="number"/>
             <label htmlFor="name"> Assignment Name </label>
-            <input name="name" placeholder={this.props.assignmentData.name}/>
+            <input name="name"/>
             <label htmlFor="type"> Type</label>
             <select name="type">
-              <option value="">Select a Type</option>
+              <option value="" disabled>Select a Type</option>
               <option value="Classwork">Classwork</option>
               <option value="Homework">Homework</option>
               <option value="Projects">Projects</option>
@@ -76,15 +32,30 @@ class ModalEdit extends React.Component {
             <label htmlFor="dueDate"> Due Date</label>
             <input type="date" name="dueDate"/>
             <label htmlFor="pointsPossible"> Points Possible</label>
-            <input type="number" name="pointsPossible" placeholder={this.props.assignmentData.pointsPossible}/>
+            <input type="number" name="pointsPossible"/>
             <label htmlFor="pointsEarned"> Points Earned</label>
-            <input type="number" name="pointsEarned" placeholder={this.props.assignmentData.pointsEarned}/>
-            <input id="submit" type="Submit" value="Save Changes"/>
+            <input type="number" name="pointsEarned" />
+            <input id="submit" type="Submit" defaultValue="Save Changes"/>
           </form>
-          <button onClick={this.deleteAssignment} id="delete">Delete Assignment</button>
+          <div className="old-data">
+            <h3>Original Assignment Data</h3>
+            <h4>Assignment Number:</h4>
+            <p> {props.assignmentData.number}</p>
+            <h4>Assignment Name:</h4>
+            <p> {props.assignmentData.name}</p>
+            <h4>Assignment Type:</h4>
+            <p> {props.assignmentData.type}</p>
+            <h4>Assignment Due Date:</h4>
+            <p> {props.assignmentData.dueDate} </p>
+            <h4>Assignment Points Possible:</h4>
+            <p> {props.assignmentData.pointsPossible}</p>
+            <h4>Assignment Points Earned:</h4>
+            <p> {props.assignmentData.pointsEarned}</p>
+          </div>
+          <button onClick={(id)=>{props.deleteAssignment(props.assignmentData.id)}} id="delete">Delete Assignment</button>
         </Modal>
     )
-  }
+
 }
 
 export default ModalEdit;
