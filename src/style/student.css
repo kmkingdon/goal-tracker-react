@@ -519,7 +519,7 @@ canvas {
         background-color: white;
         border: solid #4c4c4c 1px; }
       .goals-container .goal-view .goal-display .goal-reflection {
-        height: 15vh;
+        height: 12vh;
         display: flex;
         flex-direction: column;
         justify-content: flex-start;

@@ -1,7 +1,7 @@
 import React from 'react';
 
 const GoalReflection= (props)=> {
-
+  
   if(props.goalReflection === ''){
   return (
     <div className="goal-reflection">

@@ -14,7 +14,7 @@ class AddAssignments extends React.Component {
       <div id="add" className={(this.props.active ? ' ' : 'hidden')}>
         <div className="add-assignments">
           <h1> Add Assignments</h1>
-          <AddForm handleSubmit={this.props.handleSubmit}/>
+          <AddForm assignments={this.props.assignments} handleSubmit={this.props.handleSubmit}/>
           <p id="confirmation"> </p>
         </div>
       </div>

@@ -587,7 +587,7 @@ canvas {width:500px; height:300px;}
         border: solid $dark-grey 1px;
       }
       .goal-reflection {
-        height: 15vh;
+        height: 12vh;
         @include flex-top-column;
         form {
           @include flex-top-column;

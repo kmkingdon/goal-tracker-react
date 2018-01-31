@@ -1,8 +1,17 @@
 import React from 'react';
 
 const AddForm= (props)=> {
+  let nextNumber;
+  let assignmentArray= props.assignments.sort(function(a,b){
+    return b.number - a.number;
+  })
+  let lastObject= assignmentArray[0];
+  if(lastObject !== undefined){
+    nextNumber = lastObject.number + 1;
+  }
 
   return (
+
     <div className="add-form-container">
       <p id="col1row1"> Assignment Number </p>
       <p id="col2row1"> Assignment Name </p>
@@ -11,7 +20,7 @@ const AddForm= (props)=> {
       <p id="col5row1"> Points Possible </p>
       <p id="col6row1"> Points Earned </p>
       <form onSubmit={props.handleSubmit}>
-        <input  type="number" name="number1" />
+        <input  type="number" name="number1" placeholder={nextNumber}/>
         <input  type="text" name="name1" />
         <select  name="type1">
           <option value="">Select a Type</option>

@@ -150,10 +150,16 @@ $dark-grey: rgb(76,76,76);
   ul {
     grid-row: 2/3;
     grid-column: 1/2;
+    width: 90%;
+    height: 90%;
     cursor: pointer;
     @include grid-center;
+    margin: .8rem;
     li {
+      list-style: circle;
       font-size: 1rem;
+      margin-top: 1rem;
+      margin-left: .3rem;
       font-family: Muli;
       color: $dark-grey;
     }

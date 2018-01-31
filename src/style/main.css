@@ -110,11 +110,17 @@
   .smartgoals-info ul, .datatracking-info ul, .future-info ul {
     grid-row: 2/3;
     grid-column: 1/2;
+    width: 90%;
+    height: 90%;
     cursor: pointer;
     justify-self: center;
-    align-self: center; }
+    align-self: center;
+    margin: .8rem; }
     .smartgoals-info ul li, .datatracking-info ul li, .future-info ul li {
+      list-style: circle;
       font-size: 1rem;
+      margin-top: 1rem;
+      margin-left: .3rem;
       font-family: Muli;
       color: #4c4c4c; }
 

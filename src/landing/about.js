@@ -60,9 +60,9 @@ class About extends React.Component {
         <div onClick={this.handleGoalClick} className="smartgoals-info">
           <h1> Smart Goals </h1>
           <ul>
-            <li>sample text</li>
-            <li>sample text</li>
-            <li>sample text</li>
+            <li>Smart Goal Format: Students easily add new smart goals following the specific, measurable, attainable, relevant, and time based format.</li>
+            <li>Based on Data: As students make and reflect on their goals, the relevant data displays automatically allowing for data driven goals and reflections.</li>
+            <li>Student/Teacher Communication: Teachers can send comments to each student goal and students can submit end of goal reflections.</li>
           </ul>
         </div>
         <div onClick={this.handleDataClick} className="datatracking-image">
@@ -71,9 +71,9 @@ class About extends React.Component {
         <div onClick={this.handleDataClick} className="datatracking-info">
           <h1> Data Tracking </h1>
           <ul>
-            <li>sample text</li>
-            <li>sample text</li>
-            <li>sample text</li>
+            <li>Assignment Log: Students can enter and edit all of their graded assignments in an easy to maintain assignment log.</li>
+            <li>Data Views: Students can view graphs of their progress that automatically populate based on their assignment log.</li>
+            <li>Data View Types: All Assignments, Classwork Progress, Homework Progress, Projects Progress, Assessments Progress, and Total Grade Calculation.</li>
           </ul>
         </div>
         <div onClick={this.handleFutureClick} className="future-image">
@@ -82,9 +82,9 @@ class About extends React.Component {
         <div onClick={this.handleFutureClick} className="future-info">
           <h1> Future Features </h1>
           <ul>
-            <li>sample text</li>
-            <li>sample text</li>
-            <li>sample text</li>
+            <li>Multiple Students: Add an entire class of students with unique usernames and passwords.</li>
+            <li>Expanded Teacher Options: Teachers can create unique classes with specific grading categories and weights.</li>
+            <li>Expanded Student Options: Student goal reflections expanded to push student thinking about their goal accomplishments.</li>
           </ul>
         </div>
       </div>

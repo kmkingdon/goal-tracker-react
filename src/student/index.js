@@ -117,10 +117,6 @@ class Student extends React.Component {
 
     assignmentArray.forEach(assignment => {
 
-      let updatedAssignments = this.state.assignments;
-      updatedAssignments.push(assignment);
-      this.setState({assignments:updatedAssignments});
-
       fetch("https://goaltrackerdb.herokuapp.com/assignments/", {
         method: "POST",
         body: JSON.stringify(assignment),
@@ -129,6 +125,11 @@ class Student extends React.Component {
         })
       })
         .then(response => response.json())
+        .then(response => {
+          let updatedAssignments = this.state.assignments;
+          updatedAssignments.push(response.assignments);
+          this.setState({assignments:updatedAssignments});
+        })
         .then(response => {
           confirmation.innerHTML = "Success! Assignments Added!";
         })
@@ -191,15 +192,6 @@ class Student extends React.Component {
       students_id: 1
     };
 
-    let assignmentsNew= this.state.assignments;
-    let indexSplice;
-    assignmentsNew.forEach((assignment,index) => {
-      if(assignment.id === id){
-        indexSplice = index;
-      }
-    })
-    assignmentsNew.splice(indexSplice, 1, assignment);
-    this.setState({assignments: assignmentsNew})
 
     let putAPI = "https://goaltrackerdb.herokuapp.com/assignments/" + id;
     fetch(putAPI, {
@@ -210,8 +202,18 @@ class Student extends React.Component {
       })
     })
       .then(response => response.json())
+      .then(response => {
+        let assignmentsNew= this.state.assignments;
+        let indexSplice;
+        assignmentsNew.forEach((assignment,index) => {
+          if(assignment.id === id){
+            indexSplice = index;
+          }
+        })
+        assignmentsNew.splice(indexSplice, 1, response.assignments);
+        this.setState({assignments: assignmentsNew})
+      })
       .catch(error => console.error("Error:", error))
-      .then(response => console.log("Success:", response))
       .then(this.closeModal());
   }
 
@@ -231,10 +233,6 @@ class Student extends React.Component {
       students_id: 1
     };
 
-    let goalArray = this.state.goals;
-    goalArray.push(newGoal);
-    this.setState({goals:goalArray});
-
     fetch('https://goaltrackerdb.herokuapp.com/goals', {
       method: "POST",
       body: JSON.stringify(newGoal),
@@ -243,6 +241,11 @@ class Student extends React.Component {
       })
     })
       .then(response => response.json())
+      .then(response => {
+        let goalArray = this.state.goals;
+        goalArray.push(response.goals);
+        this.setState({goals:goalArray});
+      })
       .catch(error => console.error("Error:", error))
 
     e.target.reset();
@@ -276,19 +279,6 @@ class Student extends React.Component {
       studentReflection: reflection.get('reflection'),
     }
 
-    // let goalsNew= this.state.goals;
-    // let indexSplice;
-    // let updatedGoal;
-    // goalsNew.forEach((goal,index) => {
-    //   if(goal.id === id){
-    //     goal["studentReflection"] = newReflection;
-    //     updatedGoal = goal;
-    //     indexSplice = index;
-    //   }
-    // })
-    // goalsNew.splice(indexSplice,1,updatedGoal);
-    // this.setState({goals: goalsNew})
-
     let putAPI = "https://goaltrackerdb.herokuapp.com/goals/" + id;
 
     fetch(putAPI, {
@@ -299,6 +289,17 @@ class Student extends React.Component {
       })
     })
       .then(response => response.json())
+      .then(response => {
+        let goalsNew= this.state.goals;
+        let indexSplice;
+        goalsNew.forEach((goal,index) => {
+          if(goal.id === id){
+            indexSplice = index;
+          }
+        })
+        goalsNew.splice(indexSplice,1,response.goals);
+        this.setState({goals: goalsNew})
+      })
       .catch(error => console.error("Error:", error))
 
     event.target.reset();
@@ -319,7 +320,7 @@ class Student extends React.Component {
         </div>
         <div className="display">
           <SeeAssignments assignmentData={this.state.assignmentData} modalIsOpen={this.state.modalIsOpen} handleClickEdit={this.handleClickEdit} closeModal={this.closeModal} deleteAssignment={this.deleteAssignment} handleSubmit={this.handleSubmit} active={this.state.currentView === 'seeassignments'} assignments={this.state.assignments} updateData={this.updateData} />
-          <AddAssignments  active={this.state.currentView === 'addassignments'} handleSubmit={this.handleAddAssignments}/>
+          <AddAssignments assignments={this.state.assignments} active={this.state.currentView === 'addassignments'} handleSubmit={this.handleAddAssignments}/>
           <Goals  saveReflection={this.saveReflection} deleteGoal={this.deleteGoal} saveGoal={this.saveGoal} active={this.state.currentView === 'goals'} assignments={this.state.assignments} goals={this.state.goals}/>
           <Data active={this.state.currentView === 'data'} assignments={this.state.assignments}/>
         </div>

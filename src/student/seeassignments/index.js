@@ -12,12 +12,21 @@ class SeeAssignments extends React.Component {
     this.state= {
     };
     this.colorFinal= this.colorFinal.bind(this);
+    this.formatDate= this.formatDate.bind(this);
   }
 
   componentDidMount() {
     Modal.setAppElement(".see-assignments");
   }
 
+  formatDate(input) {
+    let date= input.split('T')[0];
+    let ptrn = /(\d{4})\-(\d{2})\-(\d{2})/;
+      if(!date || !date.match(ptrn)) {
+          return null;
+      }
+    return date.replace(ptrn, '$2/$3/$1');
+  }
 
   colorFinal() {
     let pArray = document.querySelectorAll('.final');
@@ -39,6 +48,11 @@ class SeeAssignments extends React.Component {
 
 
   render() {
+    let assignmentArray = this.props.assignments;
+    assignmentArray.sort(function(a,b){
+      return a.number - b.number;
+    })
+    
     return (
       <div id="see" className={(this.props.active ? ' ' : 'hidden')}>
         <div className="see-assignments">
@@ -54,13 +68,13 @@ class SeeAssignments extends React.Component {
               <p>Final Grade</p>
               <button>Edit</button>
             </div>
-            {this.props.assignments.map(a => <AssignmentObject key={a.name} assignment={a} handleClick={this.props.handleClickEdit} finalColor={this.colorFinal}/> )}
+            {assignmentArray.map(a => <AssignmentObject key={a.number} assignment={a} handleClick={this.props.handleClickEdit} finalColor={this.colorFinal} formatDate={this.formatDate}/> )}
           </div>
           <div className="assignment-key">
             <img src="./assets/gradekey.jpg" alt="gradekey"/>
           </div>
         </div>
-        <ModalEdit deleteAssignment={this.props.deleteAssignment} handleSubmit={this.props.handleSubmit} openModal={this.props.handleClickEdit} closeModal={this.props.closeModal} modalIsOpen={this.props.modalIsOpen} assignmentData={this.props.assignmentData}/>
+        <ModalEdit formatDate={this.formatDate} deleteAssignment={this.props.deleteAssignment} handleSubmit={this.props.handleSubmit} openModal={this.props.handleClickEdit} closeModal={this.props.closeModal} modalIsOpen={this.props.modalIsOpen} assignmentData={this.props.assignmentData}/>
       </div>
     )
   }

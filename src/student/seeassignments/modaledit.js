@@ -3,7 +3,10 @@ import Modal from 'react-modal';
 
 
 const ModalEdit = (props)=> {
-
+    let date;
+    if(props.assignmentData.dueDate !== undefined){
+      date= props.formatDate(props.assignmentData.dueDate);
+    }
 
     return (
       <Modal
@@ -46,7 +49,7 @@ const ModalEdit = (props)=> {
             <h4>Assignment Type:</h4>
             <p> {props.assignmentData.type}</p>
             <h4>Assignment Due Date:</h4>
-            <p> {props.assignmentData.dueDate} </p>
+            <p> {date} </p>
             <h4>Assignment Points Possible:</h4>
             <p> {props.assignmentData.pointsPossible}</p>
             <h4>Assignment Points Earned:</h4>
@@ -55,7 +58,6 @@ const ModalEdit = (props)=> {
           <button onClick={(id)=>{props.deleteAssignment(props.assignmentData.id)}} id="delete">Delete Assignment</button>
         </Modal>
     )
-
 }
 
 export default ModalEdit;

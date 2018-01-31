@@ -22,6 +22,10 @@ class Landing extends React.Component {
 
   componentDidMount() {
     Modal.setAppElement(".landing");
+    
+    //wake up server
+    fetch('https://goaltrackerdb.herokuapp.com/goals')
+      .then(response => response.json())
   }
 
   openModal1() {
