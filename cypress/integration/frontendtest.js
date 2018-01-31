@@ -4,6 +4,7 @@ describe('Goal Tracker', function () {
     cy.get('.student-demo button').click();
     cy.get('.modal a').click();
     cy.get('.dashboard button').eq(2).click();
+    cy.get('.current-goals button').as('startingGoalNumber');
     cy.get('.goals-dashboard #add').click();
     cy.get('.goal-add form select').eq(0).select('Classwork');
     cy.get('.goal-add form textarea').eq(0).type('test');
@@ -13,6 +14,8 @@ describe('Goal Tracker', function () {
     cy.get('.goal-add form input').eq(0).type('test4');
     cy.get('.goal-add form input').eq(1).click();
     cy.get('.current-goals button').last().click();
-    cy.get('.goal-display').closest('button').click();
+    cy.get('.delete-goal button').last().click();
+    cy.get('.current-goals button').should('have.length.equal','startingGoalNumber');
+    cy.screenshot();
   })
 });
