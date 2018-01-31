@@ -173,9 +173,7 @@ class Student extends React.Component {
 
     fetch(deleteAPI, {
       method: "DELETE",
-    })
-      .then(response => response.json())
-      .catch(error => console.error("Error:", error))
+    }).catch(error => console.error("Error:", error))
       .then(this.closeModal())
   }
 
@@ -266,9 +264,7 @@ class Student extends React.Component {
 
     fetch(deleteAPI, {
       method: "DELETE",
-    })
-      .then(response => response.json())
-      .catch(error => console.error("Error:", error))
+    }).catch(error => console.error("Error:", error))
   }
 
   saveReflection(event, id) {
