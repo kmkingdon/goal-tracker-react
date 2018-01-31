@@ -22,7 +22,9 @@ const GoalView= (props)=> {
           <p> {props.goal.teacherReview} </p>
         </div>
         <GoalReflection goalId={props.goal.id} goalReflection={props.goal.studentReflection} saveReflection={props.saveReflection}/>
-        <button onClick={(id)=>{props.deleteGoal(props.goal.id)}}> Delete Goal </button>
+        <div className="delete-goal">
+         <button onClick={(id)=>{props.deleteGoal(props.goal.id)}}> Delete Goal </button>
+        </div>
       </div>
     </div>
   );
