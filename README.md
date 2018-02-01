@@ -6,7 +6,7 @@ https://goaltrackerstudentprogress.herokuapp.com/
 # Project description
 ## Data Tracking:
 Students can add, edit, and delete assignments in the four categories of classwork, homework, projects and assessments.
-
+![addsee](https://user-images.githubusercontent.com/32685092/35702729-1882aaea-0757-11e8-84ad-4927298360ff.gif)
 ## Data Trends:
 Using the student's assignment data and Chart.js, various graphs help students visual their data and understand the trends in their work and their progress.
 
