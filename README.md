@@ -42,7 +42,7 @@ https://github.com/kmkingdon/goal-tracking-db
 
 # Author contact
 
-|![headshotsmall](https://user-images.githubusercontent.com/32685092/35702971-d0b4e966-0757-11e8-8098-c2819dff5e58.png) =100x100   | Kevin Kingdon                    |
+|![headshotsmall](https://user-images.githubusercontent.com/32685092/35702971-d0b4e966-0757-11e8-8098-c2819dff5e58.png) | width=100   | Kevin Kingdon                    |
 | ------------- | ------------- |
 | Website  | [kmkingdon.info](https://kmkingdon.info) |
 | LinkIn   | [/in/kevin-kingdon/](https://www.linkedin.com/in/kevin-kingdon/) |
