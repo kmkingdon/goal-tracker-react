@@ -39,6 +39,7 @@ Database Github:
 https://github.com/kmkingdon/goal-tracking-db
 
 # License
+MIT License Copyright (c) 2018 Kevin Kingdon
 
 # Author contact
 
