@@ -41,5 +41,5 @@ https://github.com/kmkingdon/goal-tracking-db
 
 | Name     | Kevin Kingdon                    |
 | ------------- | ------------- |
-| Website  | [a Link](https://kmkingdon.info) |
-| LinkIn   | [a Link](https://www.linkedin.com/in/kevin-kingdon/) |
+| Website  | [kmkingdon.info](https://kmkingdon.info) |
+| LinkIn   | [/in/kevin-kingdon/](https://www.linkedin.com/in/kevin-kingdon/) |
