@@ -4,7 +4,7 @@ A student and teacher platform for data tracking, data visualization, smart goal
 https://goaltrackerstudentprogress.herokuapp.com/
 
 # Project description
-##Data Tracking:
+## Data Tracking:
 Students can add, edit, and delete assignments in the four categories of classwork, homework, projects and assessments.
 
 ## Data Trends:
@@ -40,5 +40,6 @@ https://github.com/kmkingdon/goal-tracking-db
 # Author contact
 
 | Name     | Kevin Kingdon                    |
-| Website  | [a link](https://kmkingdon.info) |
-| LinkIn   | [a link](https://www.linkedin.com/in/kevin-kingdon/) |
+| ------------- | ------------- |
+| Website  | [a Link](https://kmkingdon.info) |
+| LinkIn   | [a Link](https://www.linkedin.com/in/kevin-kingdon/) |
