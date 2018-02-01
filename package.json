@@ -2,7 +2,7 @@
   "name": "goaltracker",
   "version": "0.0.1",
   "private": true,
-  "license": "MIT",
+  "license": "MIT License Copyright (c) 2018 Kevin Kingdon",
   "dependencies": {
     "chart.js": "^2.7.1",
     "react": "^16.2.0",
