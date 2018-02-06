@@ -7,7 +7,8 @@
   grid-template-rows: 40% 20% 40%;
   grid-template-columns: 50% 50%; }
 
-.teacher-demo, .student-demo {
+.teacher-demo,
+.student-demo {
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -15,7 +16,8 @@
   flex-direction: column;
   justify-content: center;
   align-items: center; }
-  .teacher-demo button, .student-demo button {
+  .teacher-demo button,
+  .student-demo button {
     width: 40%;
     height: 30%;
     background-color: paleturquoise;
@@ -61,39 +63,50 @@
   display: grid;
   grid-template-columns: 33.33% 33.33% 33.33%;
   grid-template-rows: 100%; }
-  .about .smartgoals-image, .about .smartgoals-info {
+  .about .smartgoals-image,
+  .about .smartgoals-info {
     grid-row: 1/2;
     grid-column: 1/2;
     width: 100%;
     height: 100%; }
-  .about .datatracking-image, .about .datatracking-info {
+  .about .datatracking-image,
+  .about .datatracking-info {
     grid-row: 1/2;
     grid-column: 2/3;
     width: 100%;
     height: 100%; }
-  .about .future-image, .about .future-info {
+  .about .future-image,
+  .about .future-info {
     grid-row: 1/2;
     grid-column: 3/4;
     width: 100%;
     height: 100%; }
 
-.smartgoals-image, .datatracking-image, .future-image {
+.smartgoals-image,
+.datatracking-image,
+.future-image {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   border: solid gray 5px; }
-  .smartgoals-image img, .datatracking-image img, .future-image img {
+  .smartgoals-image img,
+  .datatracking-image img,
+  .future-image img {
     width: 70%;
     height: 60%;
     cursor: pointer; }
 
-.smartgoals-info, .datatracking-info, .future-info {
+.smartgoals-info,
+.datatracking-info,
+.future-info {
   display: none;
   grid-template-columns: 100%;
   grid-template-rows: 20% 80%;
   border: solid gray 5px; }
-  .smartgoals-info h1, .datatracking-info h1, .future-info h1 {
+  .smartgoals-info h1,
+  .datatracking-info h1,
+  .future-info h1 {
     grid-row: 1/2;
     grid-column: 1/2;
     font-size: 3rem;
@@ -107,7 +120,9 @@
     justify-self: center;
     align-self: center;
     cursor: pointer; }
-  .smartgoals-info ul, .datatracking-info ul, .future-info ul {
+  .smartgoals-info ul,
+  .datatracking-info ul,
+  .future-info ul {
     grid-row: 2/3;
     grid-column: 1/2;
     width: 90%;
@@ -115,12 +130,14 @@
     cursor: pointer;
     justify-self: center;
     align-self: center;
-    margin: .8rem; }
-    .smartgoals-info ul li, .datatracking-info ul li, .future-info ul li {
+    margin: 0.8rem; }
+    .smartgoals-info ul li,
+    .datatracking-info ul li,
+    .future-info ul li {
       list-style: circle;
       font-size: 1rem;
       margin-top: 1rem;
-      margin-left: .3rem;
+      margin-left: 0.3rem;
       font-family: Muli;
       color: #4c4c4c; }
 
@@ -143,7 +160,7 @@
     grid-row: 1/2;
     grid-column: 1/2;
     height: 80%;
-    margin: .3rem .3rem 0 0;
+    margin: 0.3rem 0.3rem 0 0;
     justify-self: end; }
   .modal h2 {
     grid-row: 2/3;
@@ -160,7 +177,8 @@
     flex-direction: column;
     justify-content: center;
     align-items: center; }
-    .modal form label, .modal form input {
+    .modal form label,
+    .modal form input {
       text-align: center;
       font-size: 1.5rem;
       width: 100%;
@@ -186,5 +204,1175 @@
     color: red;
     justify-self: center;
     align-self: center; }
+
+.student {
+  width: 100vw;
+  height: 100vh;
+  box-sizing: border-box;
+  display: grid;
+  grid-template-rows: 17% 83%;
+  grid-template-columns: 25% 75%; }
+  .student .header {
+    grid-row: 1/2;
+    grid-column: 1/3;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    background-color: gray; }
+    .student .header a {
+      height: 100%;
+      width: auto;
+      text-align: center; }
+      .student .header a img {
+        height: 100%; }
+
+#logo {
+  margin-left: 5rem; }
+
+#logout {
+  font-size: 1.3rem;
+  color: black;
+  font-family: Muli;
+  margin-right: 5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center; }
+
+.dashboard {
+  grid-row: 2/3;
+  grid-column: 1/2;
+  background-color: #bfbfbf;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center; }
+  .dashboard img {
+    width: 50%;
+    height: auto;
+    margin-top: 2rem; }
+  .dashboard h1 {
+    font-size: 1.5rem;
+    font-family: Muli;
+    margin-top: 1rem;
+    color: #4c4c4c; }
+  .dashboard button {
+    width: 50%;
+    height: 4rem;
+    margin-top: 1rem;
+    border: solid gray 1px;
+    background-color: paleturquoise;
+    color: gray;
+    font-family: Muli;
+    font-size: 1rem;
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.3); }
+
+.display {
+  grid-row: 2/3;
+  grid-column: 2/3;
+  width: 100%;
+  height: 100%;
+  background-color: paleturquoise; }
+
+#data,
+#goals,
+#see,
+#add {
+  width: 100%;
+  height: 100%; }
+
+.see-assignments {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center; }
+  .see-assignments h1 {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    font-size: 2rem;
+    font-family: Muli;
+    color: #4c4c4c;
+    text-shadow: -1px -1px 0 white, 1px -1px 0 white, -1px 1px 0 white, 1px 1px 0 white; }
+  .see-assignments .assignment-container {
+    width: 90%;
+    height: 55vh;
+    background-color: #d7f6f6;
+    border: solid #4c4c4c 3px;
+    overflow: scroll; }
+    .see-assignments .assignment-container .assignment-object,
+    .see-assignments .assignment-container .assignment-header {
+      width: 100%;
+      height: 3rem;
+      border: solid #4c4c4c 1px;
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center; }
+      .see-assignments .assignment-container .assignment-object h1,
+      .see-assignments .assignment-container .assignment-object h2,
+      .see-assignments .assignment-container .assignment-object h3,
+      .see-assignments .assignment-container .assignment-object h4,
+      .see-assignments .assignment-container .assignment-object h5,
+      .see-assignments .assignment-container .assignment-object h6,
+      .see-assignments .assignment-container .assignment-object p,
+      .see-assignments .assignment-container .assignment-object button,
+      .see-assignments .assignment-container .assignment-header h1,
+      .see-assignments .assignment-container .assignment-header h2,
+      .see-assignments .assignment-container .assignment-header h3,
+      .see-assignments .assignment-container .assignment-header h4,
+      .see-assignments .assignment-container .assignment-header h5,
+      .see-assignments .assignment-container .assignment-header h6,
+      .see-assignments .assignment-container .assignment-header p,
+      .see-assignments .assignment-container .assignment-header button {
+        font-size: 1rem;
+        font-family: Muli;
+        text-align: center;
+        border: solid #4c4c4c 1px;
+        height: 100%; }
+      .see-assignments .assignment-container .assignment-object h1,
+      .see-assignments .assignment-container .assignment-header h1 {
+        width: 8%;
+        color: black;
+        text-shadow: none;
+        background-color: #bfbfbf; }
+      .see-assignments .assignment-container .assignment-object h2,
+      .see-assignments .assignment-container .assignment-header h2 {
+        width: 20%;
+        background-color: #d7f6f6; }
+      .see-assignments .assignment-container .assignment-object h3,
+      .see-assignments .assignment-container .assignment-header h3 {
+        width: 20%;
+        background-color: #bfbfbf; }
+      .see-assignments .assignment-container .assignment-object h4,
+      .see-assignments .assignment-container .assignment-header h4 {
+        width: 20%;
+        background-color: #d7f6f6; }
+      .see-assignments .assignment-container .assignment-object h5,
+      .see-assignments .assignment-container .assignment-header h5 {
+        width: 8%;
+        background-color: #bfbfbf; }
+      .see-assignments .assignment-container .assignment-object h6,
+      .see-assignments .assignment-container .assignment-header h6 {
+        width: 8%;
+        background-color: #d7f6f6; }
+      .see-assignments .assignment-container .assignment-object p,
+      .see-assignments .assignment-container .assignment-header p {
+        width: 8%;
+        background-color: #bfbfbf; }
+      .see-assignments .assignment-container .assignment-object button,
+      .see-assignments .assignment-container .assignment-header button {
+        width: 8%;
+        background-color: #d7f6f6; }
+    .see-assignments .assignment-container .assignment-header {
+      font-weight: bold;
+      color: white; }
+      .see-assignments .assignment-container .assignment-header h1 {
+        color: white;
+        background-color: gray;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center; }
+      .see-assignments .assignment-container .assignment-header h2 {
+        background-color: teal;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center; }
+      .see-assignments .assignment-container .assignment-header h3 {
+        background-color: gray;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center; }
+      .see-assignments .assignment-container .assignment-header h4 {
+        background-color: teal;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center; }
+      .see-assignments .assignment-container .assignment-header h5 {
+        background-color: gray;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center; }
+      .see-assignments .assignment-container .assignment-header h6 {
+        background-color: teal;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center; }
+      .see-assignments .assignment-container .assignment-header p {
+        background-color: gray;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center; }
+      .see-assignments .assignment-container .assignment-header button {
+        color: white;
+        background-color: teal;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center; }
+
+.assignment-key {
+  height: 10vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center; }
+  .assignment-key img {
+    margin-top: 3rem;
+    width: 40%;
+    height: auto; }
+
+.ReactModal__Overlay {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center; }
+
+.modal-edit {
+  width: 50%;
+  height: 70%;
+  background-color: #d7f6f6;
+  border: solid gray 1px;
+  border-radius: 2px;
+  display: grid;
+  grid-template-columns: 60% 40%;
+  grid-template-rows: 10% 10% 70% 10%; }
+  .modal-edit img {
+    grid-row: 1/2;
+    grid-column: 1/3;
+    height: 80%;
+    margin: 0.3rem 0.3rem 0 0;
+    justify-self: end; }
+  .modal-edit h2 {
+    grid-row: 2/3;
+    grid-column: 1/3;
+    font-size: 2rem;
+    font-family: Muli;
+    justify-self: center;
+    align-self: center; }
+  .modal-edit form {
+    grid-row: 3/4;
+    grid-column: 1/2;
+    justify-self: center;
+    align-self: center;
+    width: 90%; }
+    .modal-edit form label,
+    .modal-edit form input,
+    .modal-edit form select,
+    .modal-edit form option {
+      width: 100%;
+      height: 1.5rem;
+      font-size: 1rem;
+      font-family: Muli; }
+    .modal-edit form label {
+      margin-top: 0.5rem; }
+    .modal-edit form #submit {
+      margin-top: 1rem;
+      height: 2rem;
+      color: white;
+      background-color: teal; }
+  .modal-edit .old-data {
+    grid-row: 3/4;
+    grid-column: 2/3;
+    justify-self: center;
+    align-self: center; }
+    .modal-edit .old-data h3 {
+      width: 100%;
+      font-size: 1.2rem;
+      font-family: Muli;
+      font-color: #4c4c4c;
+      margin-bottom: 1rem;
+      font-weight: bold; }
+    .modal-edit .old-data h4 {
+      width: 100%;
+      font-size: 1rem;
+      font-family: Muli;
+      font-color: #4c4c4c;
+      margin-bottom: 0.5rem; }
+    .modal-edit .old-data p {
+      text-align: right;
+      color: red;
+      margin-bottom: 0.8rem; }
+  .modal-edit button {
+    grid-row: 4/5;
+    grid-column: 1/3;
+    justify-self: center;
+    align-self: center;
+    width: 40%;
+    height: 2rem;
+    background-color: red;
+    color: white; }
+
+.add-assignments {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center; }
+  .add-assignments h1 {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    font-size: 2rem;
+    font-family: Muli;
+    color: #4c4c4c;
+    text-shadow: -1px -1px 0 white, 1px -1px 0 white, -1px 1px 0 white, 1px 1px 0 white; }
+  .add-assignments p {
+    font-size: 1rem;
+    font-family: Muli;
+    color: #4c4c4c; }
+
+.add-form-container {
+  width: 90%;
+  height: auto;
+  display: grid;
+  grid-template-columns: 16% 16% 16% 16% 16% 16%;
+  grid-template-rows: 15% 85%; }
+  .add-form-container #col1row1 {
+    grid-row: 1/2;
+    grid-column: 1/2;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    justify-self: center;
+    align-self: center; }
+  .add-form-container #col2row1 {
+    grid-row: 1/2;
+    grid-column: 2/3;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    justify-self: center;
+    align-self: center; }
+  .add-form-container #col3row1 {
+    grid-row: 1/2;
+    grid-column: 3/4;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    justify-self: center;
+    align-self: center; }
+  .add-form-container #col4row1 {
+    grid-row: 1/2;
+    grid-column: 4/5;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    justify-self: center;
+    align-self: center; }
+  .add-form-container #col5row1 {
+    grid-row: 1/2;
+    grid-column: 5/6;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    justify-self: center;
+    align-self: center; }
+  .add-form-container #col6row1 {
+    grid-row: 1/2;
+    grid-column: 6/7;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    justify-self: center;
+    align-self: center; }
+  .add-form-container form {
+    grid-row: 2/3;
+    grid-column: 1/end;
+    margin-top: 1rem;
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-columns: 16% 16% 16% 16% 16% 16%;
+    grid-template-rows: 20% 20% 20% 20% 20%; }
+    .add-form-container form input,
+    .add-form-container form select {
+      height: 3rem;
+      width: 100%;
+      font-size: 1rem;
+      font-family: Muli; }
+    .add-form-container form #submit {
+      grid-row: 6/7;
+      grid-column: 1/7;
+      width: 80%;
+      justify-self: center;
+      align-self: center;
+      height: 3rem;
+      background-color: teal;
+      color: white;
+      font-size: 1.5rem; }
+
+#confirmation {
+  background-color: transparent;
+  margin-top: 5rem;
+  font-size: 1.5rem;
+  color: white; }
+
+.data-container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center; }
+  .data-container h1 {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    font-size: 2rem;
+    font-family: Muli;
+    color: #4c4c4c;
+    text-shadow: -1px -1px 0 white, 1px -1px 0 white, -1px 1px 0 white, 1px 1px 0 white; }
+  .data-container .data-buttons {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 100%; }
+    .data-container .data-buttons button {
+      margin: 0rem 0.5rem;
+      background-color: teal;
+      width: 8rem;
+      height: 2rem;
+      color: white;
+      font-size: 0.8rem;
+      font-family: Muli; }
+  .data-container .graph-container {
+    margin-top: 2rem;
+    width: 90%;
+    height: 65%; }
+    .data-container .graph-container canvas {
+      width: 100%;
+      height: 90%; }
+    .data-container .graph-container img {
+      margin-top: 1rem;
+      width: 40%; }
+    .data-container .graph-container h2 {
+      font-size: 2rem;
+      font-family: Muli;
+      color: #4c4c4c; }
+
+canvas {
+  width: 500px;
+  height: 300px; }
+
+#classwork canvas,
+#homework canvas,
+#assessments canvas,
+#projects canvas {
+  width: 100%;
+  height: 90%; }
+
+.goals-container {
+  width: 100%;
+  height: 100%;
+  display: grid;
+  grid-template-rows: 15% 85%;
+  grid-template-columns: 45% 55%; }
+  .goals-container .goals-dashboard {
+    grid-row: 1/2;
+    grid-column: 1/3;
+    display: grid;
+    grid-template-rows: 40% 60%;
+    grid-template-columns: 80% 20%;
+    background-color: teal; }
+    .goals-container .goals-dashboard h1 {
+      grid-row: 1/2;
+      grid-column: 1/3;
+      margin-top: 1rem;
+      margin-bottom: 0.5rem;
+      font-size: 2rem;
+      font-family: Muli;
+      color: #4c4c4c;
+      text-shadow: -1px -1px 0 white, 1px -1px 0 white, -1px 1px 0 white, 1px 1px 0 white;
+      justify-self: center;
+      align-self: center; }
+    .goals-container .goals-dashboard .current-goals {
+      grid-row: 2/3;
+      grid-column: 1/2;
+      display: flex;
+      flex-direction: row;
+      justify-content: flex-start;
+      align-items: center; }
+      .goals-container .goals-dashboard .current-goals h2 {
+        font-size: 1.3rem;
+        font-family: Muli;
+        color: white;
+        margin-left: 2rem; }
+      .goals-container .goals-dashboard .current-goals button {
+        width: 15%;
+        height: 70%;
+        border-radius: 5px;
+        color: #4c4c4c;
+        font-family: Muli;
+        font-size: 0.8rem;
+        margin: 0rem 0.5rem; }
+    .goals-container .goals-dashboard #add {
+      grid-row: 2/3;
+      grid-column: 2/3;
+      width: 90%;
+      height: 80%;
+      justify-self: center;
+      align-self: center;
+      background-color: gray;
+      color: white;
+      font-size: 1.3rem;
+      font-family: Muli; }
+  .goals-container .goal-view {
+    grid-row: 2/3;
+    grid-column: 1/2;
+    background-color: paleturquoise; }
+    .goals-container .goal-view .goal-display {
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: center; }
+      .goals-container .goal-view .goal-display h1 {
+        font-size: 1.5rem;
+        font-family: Muli;
+        color: #4c4c4c;
+        margin: 1rem 0rem; }
+      .goals-container .goal-view .goal-display h2 {
+        width: 85%;
+        font-size: 1rem;
+        font-family: Muli;
+        color: #4c4c4c;
+        margin: 0.3rem 0.3rem;
+        text-align: left; }
+      .goals-container .goal-view .goal-display p {
+        width: 80%;
+        font-size: 1rem;
+        font-family: Muli; }
+      .goals-container .goal-view .goal-display div {
+        margin-top: 1rem;
+        width: 85%;
+        height: 8vh;
+        background-color: white;
+        border: solid #4c4c4c 1px; }
+      .goals-container .goal-view .goal-display .goal-reflection {
+        height: 12vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center; }
+        .goals-container .goal-view .goal-display .goal-reflection form {
+          display: flex;
+          flex-direction: column;
+          justify-content: flex-start;
+          align-items: center; }
+          .goals-container .goal-view .goal-display .goal-reflection form label {
+            font-size: 1rem;
+            font-family: Muli;
+            color: #4c4c4c;
+            margin: 0.3rem 0.3rem; }
+          .goals-container .goal-view .goal-display .goal-reflection form textarea {
+            width: 95%;
+            height: 6vh; }
+          .goals-container .goal-view .goal-display .goal-reflection form input {
+            width: 95%;
+            background-color: teal;
+            color: white;
+            font-family: Muli; }
+        .goals-container .goal-view .goal-display .goal-reflection p {
+          margin: 0.5rem 0.5rem; }
+      .goals-container .goal-view .goal-display button {
+        width: 30%;
+        margin-top: 1rem;
+        background-color: red;
+        color: white;
+        font-family: Muli; }
+    .goals-container .goal-view .goal-add {
+      width: 100%;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: center; }
+      .goals-container .goal-view .goal-add h1 {
+        font-size: 1.5rem;
+        font-family: Muli;
+        color: #4c4c4c;
+        margin: 0.5rem 0rem; }
+      .goals-container .goal-view .goal-add form {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+        width: 90%; }
+        .goals-container .goal-view .goal-add form label {
+          width: 100%;
+          font-size: 1rem;
+          font-family: Muli;
+          color: #4c4c4c;
+          margin: 0.2rem 0rem;
+          display: flex;
+          flex-direction: column;
+          justify-content: flex-start; }
+          .goals-container .goal-view .goal-add form label span {
+            font-size: 0.8rem;
+            color: black; }
+        .goals-container .goal-view .goal-add form input {
+          width: 100%;
+          height: 2rem; }
+        .goals-container .goal-view .goal-add form textarea {
+          width: 100%;
+          height: 2rem; }
+        .goals-container .goal-view .goal-add form select {
+          width: 100%;
+          height: 1.5rem; }
+        .goals-container .goal-view .goal-add form #save {
+          margin-top: 0.5rem;
+          background-color: teal;
+          color: white; }
+  .goals-container .data {
+    grid-row: 2/3;
+    grid-column: 2/3;
+    background-color: #d7f6f6; }
+    .goals-container .data .graph-container {
+      margin: 0.5rem 0.5rem;
+      width: 90%;
+      height: 60vh; }
+    .goals-container .data img {
+      width: 40%; }
+
+.teacher {
+  width: 100vw;
+  height: 100vh;
+  box-sizing: border-box;
+  display: grid;
+  grid-template-rows: 17% 83%;
+  grid-template-columns: 25% 75%; }
+  .teacher .header {
+    grid-row: 1/2;
+    grid-column: 1/3;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    background-color: gray; }
+    .teacher .header a {
+      height: 100%;
+      width: auto;
+      text-align: center; }
+      .teacher .header a img {
+        height: 100%; }
+
+#logo {
+  margin-left: 5rem; }
+
+#logout {
+  font-size: 1.3rem;
+  color: black;
+  font-family: Muli;
+  margin-right: 5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center; }
+
+.dashboard-teacher {
+  grid-row: 2/3;
+  grid-column: 1/2;
+  background-color: #bfbfbf;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center; }
+  .dashboard-teacher img {
+    width: 50%;
+    height: auto;
+    margin-top: 2rem; }
+  .dashboard-teacher h1 {
+    font-size: 1.5rem;
+    font-family: Muli;
+    margin-top: 1rem;
+    color: #4c4c4c; }
+  .dashboard-teacher form {
+    margin-top: 2rem;
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center; }
+    .dashboard-teacher form label {
+      font-size: 1rem;
+      font-family: Muli;
+      margin-top: 1.5rem;
+      margin-bottom: 0.5rem;
+      color: #4c4c4c; }
+    .dashboard-teacher form select {
+      width: 70%;
+      height: 2rem;
+      font-size: 1rem;
+      font-family: Muli; }
+
+.display-teacher {
+  grid-row: 2/3;
+  grid-column: 2/3;
+  width: 100%;
+  height: 100%;
+  background-color: paleturquoise;
+  display: grid;
+  grid-template-rows: 100%;
+  grid-template-columns: 50% 50%; }
+  .display-teacher #goal-teacher {
+    grid-row: 1/2;
+    grid-column: 1/2;
+    width: 100%;
+    height: 100%; }
+  .display-teacher #data-teacher {
+    grid-row: 1/2;
+    grid-column: 2/3;
+    width: 100%;
+    height: 100%; }
+
+.goal-teacher-display {
+  display: grid;
+  width: 100%;
+  height: 100%;
+  grid-template-rows: 20% 80%;
+  grid-template-columns: 100%; }
+  .goal-teacher-display .goal-menu {
+    grid-row: 1/2;
+    grid-column: 1/2;
+    background-color: teal;
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-rows: 20% 80%;
+    grid-template-columns: 100%; }
+    .goal-teacher-display .goal-menu h2 {
+      grid-row: 1/2;
+      grid-column: 1/2;
+      width: 100%;
+      text-align: center;
+      font-size: 1.3rem;
+      font-family: Muli;
+      color: white;
+      margin-top: 0.5rem; }
+    .goal-teacher-display .goal-menu .button-container {
+      grid-row: 2/3;
+      grid-column: 1/2;
+      display: flex;
+      flex-flow: row wrap;
+      justify-content: center;
+      align-items: center; }
+      .goal-teacher-display .goal-menu .button-container button {
+        width: 40%;
+        height: 30%;
+        border-radius: 5px;
+        color: #4c4c4c;
+        font-family: Muli;
+        font-size: 0.8rem;
+        margin: 0rem 0.5rem; }
+  .goal-teacher-display .goal-teacher-view {
+    grid-row: 2/3;
+    grid-column: 1/2;
+    width: 100%;
+    height: 100%; }
+    .goal-teacher-display .goal-teacher-view .goal-display-teacher {
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: center; }
+      .goal-teacher-display .goal-teacher-view .goal-display-teacher h1 {
+        font-size: 1.5rem;
+        font-family: Muli;
+        color: #4c4c4c;
+        margin: 0.5rem 0rem; }
+      .goal-teacher-display .goal-teacher-view .goal-display-teacher h2 {
+        width: 85%;
+        font-size: 1rem;
+        font-family: Muli;
+        color: #4c4c4c;
+        margin: 0.3rem 0.3rem;
+        text-align: left; }
+      .goal-teacher-display .goal-teacher-view .goal-display-teacher p {
+        width: 80%;
+        font-size: 1rem;
+        font-family: Muli; }
+      .goal-teacher-display .goal-teacher-view .goal-display-teacher div {
+        margin-top: 1rem;
+        width: 85%;
+        height: 6vh;
+        background-color: white;
+        border: solid #4c4c4c 1px; }
+        .goal-teacher-display .goal-teacher-view .goal-display-teacher div p {
+          margin: 0.5rem; }
+      .goal-teacher-display .goal-teacher-view .goal-display-teacher .goal-comment {
+        height: 15vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center; }
+        .goal-teacher-display .goal-teacher-view .goal-display-teacher .goal-comment form {
+          display: flex;
+          flex-direction: column;
+          justify-content: flex-start;
+          align-items: center; }
+          .goal-teacher-display .goal-teacher-view .goal-display-teacher .goal-comment form label {
+            font-size: 1rem;
+            font-family: Muli;
+            color: #4c4c4c;
+            margin: 0.3rem 0.3rem; }
+          .goal-teacher-display .goal-teacher-view .goal-display-teacher .goal-comment form textarea {
+            width: 95%;
+            height: 6vh; }
+          .goal-teacher-display .goal-teacher-view .goal-display-teacher .goal-comment form input {
+            width: 95%;
+            background-color: teal;
+            color: white;
+            font-family: Muli; }
+        .goal-teacher-display .goal-teacher-view .goal-display-teacher .goal-comment p {
+          margin: 0.5rem 0.5rem; }
+      .goal-teacher-display .goal-teacher-view .goal-display-teacher button {
+        width: 30%;
+        margin-top: 1rem;
+        background-color: red;
+        color: white;
+        font-family: Muli; }
+
+.data-teacher-display {
+  display: grid;
+  width: 100%;
+  height: 100%;
+  grid-template-rows: 20% 80%;
+  grid-template-columns: 100%; }
+  .data-teacher-display .data-menu {
+    grid-row: 1/2;
+    grid-column: 1/2;
+    background-color: #bfbfbf;
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-rows: 20% 80%;
+    grid-template-columns: 100%; }
+    .data-teacher-display .data-menu h2 {
+      grid-row: 1/2;
+      grid-column: 1/2;
+      width: 100%;
+      text-align: center;
+      font-size: 1.3rem;
+      font-family: Muli;
+      color: white;
+      margin-top: 0.5rem; }
+    .data-teacher-display .data-menu .button-container {
+      grid-row: 2/3;
+      grid-column: 1/2;
+      display: flex;
+      flex-flow: row wrap;
+      justify-content: center;
+      align-items: center; }
+      .data-teacher-display .data-menu .button-container button {
+        width: 40%;
+        height: 20%;
+        border-radius: 5px;
+        color: #4c4c4c;
+        font-family: Muli;
+        font-size: 0.8rem;
+        margin: 0rem 0.5rem; }
+  .data-teacher-display .teacher-data-view {
+    grid-row: 2/3;
+    grid-column: 1/2;
+    justify-self: center;
+    align-self: center;
+    width: 90%;
+    height: 90%; }
+    .data-teacher-display .teacher-data-view .graph-container {
+      width: 90%;
+      height: 50vh; }
+      .data-teacher-display .teacher-data-view .graph-container img {
+        width: 50%; }
+
+.hidden {
+  display: none; }
+
+@media only screen and (max-width: 500px) {
+  .landing {
+    height: 200vh;
+    grid-template-rows: 10% 10% 10% 70%;
+    grid-template-columns: 100%; }
+
+  .teacher-demo button,
+  .student-demo button {
+    width: 70%;
+    height: 40%; }
+
+  .teacher-demo {
+    grid-row: 1/2;
+    grid-column: 1/2; }
+
+  .student-demo {
+    grid-row: 3/4;
+    grid-column: 1/2; }
+
+  .logo {
+    grid-row: 2/3;
+    grid-column: 1/2;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; }
+    .logo h1 {
+      font-size: 1.4rem; }
+    .logo img {
+      height: 50%; }
+
+  .about {
+    grid-row: 4/5;
+    grid-column: 1/2;
+    grid-template-columns: 100%;
+    grid-template-rows: 33.33% 33.33% 33.33%; }
+    .about .smartgoals-image,
+    .about .smartgoals-info {
+      grid-row: 1/2;
+      grid-column: 1/2;
+      height: 98%;
+      width: 98%;
+      justify-self: center;
+      align-self: center; }
+    .about .datatracking-image,
+    .about .datatracking-info {
+      grid-row: 2/3;
+      grid-column: 1/2;
+      height: 98%;
+      width: 98%;
+      justify-self: center;
+      align-self: center; }
+    .about .future-image,
+    .about .future-info {
+      grid-row: 3/4;
+      grid-column: 1/2;
+      height: 98%;
+      width: 98%;
+      justify-self: center;
+      align-self: center; }
+
+  .smartgoals-image img,
+  .datatracking-image img,
+  .future-image img {
+    width: 60%; }
+
+  .smartgoals-info h1,
+  .datatracking-info h1,
+  .future-info h1 {
+    font-size: 2rem;
+    padding-top: 0.4rem;
+    margin-top: 0.8rem; }
+  .smartgoals-info ul,
+  .datatracking-info ul,
+  .future-info ul {
+    width: 80%;
+    height: 85%; }
+    .smartgoals-info ul li,
+    .datatracking-info ul li,
+    .future-info ul li {
+      font-size: 0.8rem; }
+
+  .ReactModal__Overlay {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; }
+
+  .modal {
+    width: 90%;
+    height: 50%; }
+
+  .student {
+    grid-template-rows: 12% 20% 73%;
+    grid-template-columns: 100%; }
+    .student .header {
+      grid-column: 1/2; }
+
+  #logo {
+    margin-left: 1rem; }
+
+  #logout {
+    margin-right: 1rem; }
+
+  .dashboard {
+    grid-row: 2/3;
+    grid-column: 1/2;
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: flex-start;
+    align-items: center; }
+    .dashboard img {
+      width: 17%;
+      margin: 0.5rem; }
+    .dashboard h1 {
+      font-size: 1rem;
+      margin: 0.5rem; }
+    .dashboard button {
+      width: 30%;
+      height: 3rem;
+      margin: 0.5rem;
+      font-size: 0.7rem; }
+
+  .display {
+    grid-row: 3/4;
+    grid-column: 1/2; }
+
+  .see-assignments .assignment-container {
+    width: 100%; }
+    .see-assignments .assignment-container .assignment-object,
+    .see-assignments .assignment-container .assignment-header {
+      width: 100%;
+      height: 2rem; }
+      .see-assignments .assignment-container .assignment-object h1,
+      .see-assignments .assignment-container .assignment-object h2,
+      .see-assignments .assignment-container .assignment-object h3,
+      .see-assignments .assignment-container .assignment-object h4,
+      .see-assignments .assignment-container .assignment-object h5,
+      .see-assignments .assignment-container .assignment-object h6,
+      .see-assignments .assignment-container .assignment-object p,
+      .see-assignments .assignment-container .assignment-object button,
+      .see-assignments .assignment-container .assignment-header h1,
+      .see-assignments .assignment-container .assignment-header h2,
+      .see-assignments .assignment-container .assignment-header h3,
+      .see-assignments .assignment-container .assignment-header h4,
+      .see-assignments .assignment-container .assignment-header h5,
+      .see-assignments .assignment-container .assignment-header h6,
+      .see-assignments .assignment-container .assignment-header p,
+      .see-assignments .assignment-container .assignment-header button {
+        font-size: 0.3rem; }
+
+  .assignment-key img {
+    margin-top: 1rem; }
+
+  .modal-edit {
+    width: 97%;
+    height: 80%; }
+    .modal-edit .old-data h3 {
+      margin-top: 0.6rem;
+      font-size: 1rem; }
+    .modal-edit .old-data h4 {
+      margin-bottom: 0.2rem; }
+    .modal-edit .old-data p {
+      margin-bottom: 0.8rem;
+      margin-right: 0.4rem; }
+
+  .add-assignments p {
+    font-size: 0.25rem; }
+
+  .add-form-container {
+    width: 98%; }
+    .add-form-container form input,
+    .add-form-container form select {
+      border: solid black 1px;
+      height: 2rem;
+      width: 90%;
+      font-size: 0.4rem;
+      background-color: white; }
+
+  .data-container .data-buttons {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center; }
+    .data-container .data-buttons button {
+      margin: 0.3rem 0.5rem;
+      width: 5rem;
+      height: 2rem;
+      font-size: 0.3rem; }
+  .data-container .graph-container {
+    height: 50%; }
+    .data-container .graph-container canvas {
+      height: 80%; }
+
+  .goals-container {
+    height: 160%;
+    grid-template-rows: 20% 70% 70%;
+    grid-template-columns: 100%; }
+    .goals-container .goals-dashboard {
+      grid-row: 1/2;
+      grid-column: 1/2; }
+      .goals-container .goals-dashboard .current-goals h2 {
+        font-size: 0.6rem;
+        margin-left: 0.5rem; }
+      .goals-container .goals-dashboard .current-goals button {
+        width: 30%;
+        height: 30%;
+        font-size: 0.6rem;
+        margin: 0.5rem 0.5rem; }
+      .goals-container .goals-dashboard #add {
+        font-size: 0.8rem; }
+    .goals-container .goal-view {
+      grid-row: 2/3;
+      grid-column: 1/2; }
+      .goals-container .goal-view .goal-display h1 {
+        font-size: 1.3rem; }
+      .goals-container .goal-view .goal-display h2 {
+        font-size: 0.9rem; }
+      .goals-container .goal-view .goal-display p {
+        font-size: 0.8rem; }
+      .goals-container .goal-view .goal-display .goal-reflection {
+        height: 16vh; }
+        .goals-container .goal-view .goal-display .goal-reflection form textarea {
+          border: solid black 1px; }
+      .goals-container .goal-view .goal-add form input {
+        border: solid black 1px; }
+      .goals-container .goal-view .goal-add form textarea {
+        border: solid black 1px; }
+      .goals-container .goal-view .goal-add form select {
+        border: solid black 1px; }
+    .goals-container .data {
+      grid-row: 3/4;
+      grid-column: 1/2; }
+
+  .teacher {
+    grid-template-rows: 12% 20% 78%;
+    grid-template-columns: 100%; }
+    .teacher .header {
+      grid-column: 1/2; }
+
+  .dashboard-teacher {
+    grid-row: 2/3;
+    grid-column: 1/2;
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: flex-start;
+    align-items: center; }
+    .dashboard-teacher img {
+      width: 20%;
+      margin: 0.5rem; }
+    .dashboard-teacher h1 {
+      font-size: 1rem;
+      margin: 0.5rem; }
+    .dashboard-teacher form {
+      margin-top: 0rem;
+      width: 70%; }
+      .dashboard-teacher form label {
+        font-size: 0.8rem;
+        margin-top: 1rem; }
+      .dashboard-teacher form select {
+        border: solid black 1px;
+        background-color: white;
+        width: 70%;
+        height: 1.3rem;
+        font-size: 0.8rem; }
+
+  .display-teacher {
+    grid-row: 3/4;
+    grid-column: 1/2;
+    height: 150%;
+    grid-template-rows: 90% 80%;
+    grid-template-columns: 100%; }
+    .display-teacher #goal-teacher {
+      grid-row: 1/2;
+      grid-column: 1/2; }
+    .display-teacher #data-teacher {
+      grid-row: 2/3;
+      grid-column: 1/2; } }
 
 /*# sourceMappingURL=main.css.map */

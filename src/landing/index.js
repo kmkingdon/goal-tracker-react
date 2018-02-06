@@ -1,7 +1,5 @@
 import React from 'react';
 import Modal from 'react-modal';
-import '../style/reset.css';
-import '../style/main.css';
 import TeacherModal from './teachermodal'
 import StudentModal from './studentmodal'
 import About from './about';
@@ -22,7 +20,7 @@ class Landing extends React.Component {
 
   componentDidMount() {
     Modal.setAppElement(".landing");
-    
+
     //wake up server
     fetch('https://goaltrackerdb.herokuapp.com/goals')
       .then(response => response.json())

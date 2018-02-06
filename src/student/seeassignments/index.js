@@ -1,7 +1,5 @@
 import React from 'react';
 import Modal from 'react-modal';
-import '../../style/reset.css';
-import '../../style/student.css';
 import AssignmentObject from './assignmentobject'
 import ModalEdit from './modaledit';
 
@@ -52,7 +50,7 @@ class SeeAssignments extends React.Component {
     assignmentArray.sort(function(a,b){
       return a.number - b.number;
     })
-    
+
     return (
       <div id="see" className={(this.props.active ? ' ' : 'hidden')}>
         <div className="see-assignments">

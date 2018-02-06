@@ -1,6 +1,4 @@
 import React from 'react';
-import '../style/reset.css';
-import '../style/student.css';
 import Header from '../header.js'
 import AddAssignments from './addassignments/index.js';
 import SeeAssignments from './seeassignments/index.js';

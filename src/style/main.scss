@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Muli');
+@import url("https://fonts.googleapis.com/css?family=Muli");
 
 @mixin fill {
   width: 100%;
@@ -23,23 +23,38 @@
   align-items: center;
 }
 
-$light-teal: rgb(215,246,246);
-$teal: rgb(175,238,238);
-$light-grey: rgb(191,191,191);
-$mid-grey: rgb(128,128,128);
-$dark-grey: rgb(76,76,76);
+@mixin flex-top-column {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
 
+@mixin flex-start-row {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+}
 
-.landing{
+$light-teal: rgb(215, 246, 246);
+$teal: rgb(175, 238, 238);
+$light-grey: rgb(191, 191, 191);
+$mid-grey: rgb(128, 128, 128);
+$dark-grey: rgb(76, 76, 76);
+
+//Landing Styling
+.landing {
   overflow: hidden;
-  width:100vw;
-  height:100vh;
+  width: 100vw;
+  height: 100vh;
   display: grid;
   grid-template-rows: 40% 20% 40%;
   grid-template-columns: 50% 50%;
 }
 
-.teacher-demo, .student-demo {
+.teacher-demo,
+.student-demo {
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -53,24 +68,21 @@ $dark-grey: rgb(76,76,76);
     color: white;
     font-size: 2rem;
     font-family: Muli;
-    text-shadow:
-   -1px -1px 0 #000,
-    1px -1px 0 #000,
-    -1px 1px 0 #000,
-     1px 1px 0 #000;
+    text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000,
+      1px 1px 0 #000;
   }
 }
 
 .teacher-demo {
   grid-row: 1/2;
   grid-column: 1/2;
-  background-image: url('../landing/teacher.jpg');
+  background-image: url("../landing/teacher.jpg");
 }
 
 .student-demo {
   grid-row: 1/2;
   grid-column: 2/3;
-  background-image: url('../landing/student.jpg');
+  background-image: url("../landing/student.jpg");
 }
 
 .logo {
@@ -82,11 +94,8 @@ $dark-grey: rgb(76,76,76);
     font-size: 3rem;
     color: white;
     font-family: Muli;
-    text-shadow:
-   -1px -1px 0 #000,
-    1px -1px 0 #000,
-    -1px 1px 0 #000,
-     1px 1px 0 #000;
+    text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000,
+      1px 1px 0 #000;
   }
   img {
     height: 100%;
@@ -98,28 +107,33 @@ $dark-grey: rgb(76,76,76);
 .about {
   grid-row: 3/4;
   grid-column: 1/3;
-  background-color:$teal;
+  background-color: $teal;
   display: grid;
   grid-template-columns: 33.33% 33.33% 33.33%;
   grid-template-rows: 100%;
-  .smartgoals-image, .smartgoals-info {
+  .smartgoals-image,
+  .smartgoals-info {
     grid-row: 1/2;
     grid-column: 1/2;
     @include fill;
   }
-  .datatracking-image, .datatracking-info {
+  .datatracking-image,
+  .datatracking-info {
     grid-row: 1/2;
     grid-column: 2/3;
     @include fill;
   }
-  .future-image, .future-info {
+  .future-image,
+  .future-info {
     grid-row: 1/2;
     grid-column: 3/4;
     @include fill;
   }
 }
 
-.smartgoals-image, .datatracking-image, .future-image {
+.smartgoals-image,
+.datatracking-image,
+.future-image {
   @include flex-center-column;
   border: solid $mid-grey 5px;
   img {
@@ -129,7 +143,9 @@ $dark-grey: rgb(76,76,76);
   }
 }
 
-.smartgoals-info, .datatracking-info, .future-info {
+.smartgoals-info,
+.datatracking-info,
+.future-info {
   display: none;
   grid-template-columns: 100%;
   grid-template-rows: 20% 80%;
@@ -154,12 +170,12 @@ $dark-grey: rgb(76,76,76);
     height: 90%;
     cursor: pointer;
     @include grid-center;
-    margin: .8rem;
+    margin: 0.8rem;
     li {
       list-style: circle;
       font-size: 1rem;
       margin-top: 1rem;
-      margin-left: .3rem;
+      margin-left: 0.3rem;
       font-family: Muli;
       color: $dark-grey;
     }
@@ -179,14 +195,14 @@ $dark-grey: rgb(76,76,76);
   display: grid;
   grid-template-columns: 100%;
   grid-template-rows: 10% 20% 40% 20% 10%;
-  img{
+  img {
     grid-row: 1/2;
     grid-column: 1/2;
     height: 80%;
-    margin: .3rem .3rem 0 0;
+    margin: 0.3rem 0.3rem 0 0;
     justify-self: end;
   }
-  h2{
+  h2 {
     grid-row: 2/3;
     grid-column: 1/2;
     justify-self: center;
@@ -199,7 +215,8 @@ $dark-grey: rgb(76,76,76);
     justify-self: center;
     width: 80%;
     @include flex-center-column;
-    label, input {
+    label,
+    input {
       text-align: center;
       font-size: 1.5rem;
       width: 100%;
@@ -226,5 +243,1298 @@ $dark-grey: rgb(76,76,76);
     grid-column: 1/2;
     color: red;
     @include grid-center;
+  }
+}
+
+//Student Section Styling
+
+.student {
+  width: 100vw;
+  height: 100vh;
+  box-sizing: border-box;
+  display: grid;
+  grid-template-rows: 17% 83%;
+  grid-template-columns: 25% 75%;
+  .header {
+    grid-row: 1/2;
+    grid-column: 1/3;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    background-color: $mid-grey;
+    a {
+      height: 100%;
+      width: auto;
+      text-align: center;
+      img {
+        height: 100%;
+      }
+    }
+  }
+}
+
+#logo {
+  margin-left: 5rem;
+}
+
+#logout {
+  font-size: 1.3rem;
+  color: black;
+  font-family: Muli;
+  margin-right: 5rem;
+  @include flex-center-column;
+}
+
+.dashboard {
+  grid-row: 2/3;
+  grid-column: 1/2;
+  background-color: $light-grey;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  img {
+    width: 50%;
+    height: auto;
+    margin-top: 2rem;
+  }
+  h1 {
+    font-size: 1.5rem;
+    font-family: Muli;
+    margin-top: 1rem;
+    color: $dark-grey;
+  }
+  button {
+    width: 50%;
+    height: 4rem;
+    margin-top: 1rem;
+    border: solid $mid-grey 1px;
+    background-color: $teal;
+    color: $mid-grey;
+    font-family: Muli;
+    font-size: 1rem;
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.3);
+  }
+}
+
+.display {
+  grid-row: 2/3;
+  grid-column: 2/3;
+  @include fill;
+  background-color: $teal;
+}
+
+#data,
+#goals,
+#see,
+#add {
+  @include fill;
+}
+
+.see-assignments {
+  @include fill;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  h1 {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    font-size: 2rem;
+    font-family: Muli;
+    color: $dark-grey;
+    text-shadow: -1px -1px 0 white, 1px -1px 0 white, -1px 1px 0 white,
+      1px 1px 0 white;
+  }
+  .assignment-container {
+    width: 90%;
+    height: 55vh;
+    background-color: $light-teal;
+    border: solid $dark-grey 3px;
+    overflow: scroll;
+    .assignment-object,
+    .assignment-header {
+      width: 100%;
+      height: 3rem;
+      border: solid $dark-grey 1px;
+      @include flex-center-row;
+
+      h1,
+      h2,
+      h3,
+      h4,
+      h5,
+      h6,
+      p,
+      button {
+        font-size: 1rem;
+        font-family: Muli;
+        text-align: center;
+        border: solid $dark-grey 1px;
+        height: 100%;
+      }
+      h1 {
+        width: 8%;
+        color: black;
+        text-shadow: none;
+        background-color: $light-grey;
+      }
+      h2 {
+        width: 20%;
+        background-color: $light-teal;
+      }
+      h3 {
+        width: 20%;
+        background-color: $light-grey;
+      }
+      h4 {
+        width: 20%;
+        background-color: $light-teal;
+      }
+      h5 {
+        width: 8%;
+        background-color: $light-grey;
+      }
+      h6 {
+        width: 8%;
+        background-color: $light-teal;
+      }
+      p {
+        width: 8%;
+        background-color: $light-grey;
+      }
+      button {
+        width: 8%;
+        background-color: $light-teal;
+      }
+    }
+    .assignment-header {
+      font-weight: bold;
+      color: white;
+      h1 {
+        color: white;
+        background-color: $mid-grey;
+        @include flex-center-column;
+      }
+      h2 {
+        background-color: teal;
+        @include flex-center-column;
+      }
+      h3 {
+        background-color: $mid-grey;
+        @include flex-center-column;
+      }
+      h4 {
+        background-color: teal;
+        @include flex-center-column;
+      }
+      h5 {
+        background-color: $mid-grey;
+        @include flex-center-column;
+      }
+      h6 {
+        background-color: teal;
+        @include flex-center-column;
+      }
+      p {
+        background-color: $mid-grey;
+        @include flex-center-column;
+      }
+      button {
+        color: white;
+        background-color: teal;
+        @include flex-center-column;
+      }
+    }
+  }
+}
+
+.assignment-key {
+  height: 10vh;
+  width: 100%;
+  @include flex-center-column;
+  img {
+    margin-top: 3rem;
+    width: 40%;
+    height: auto;
+  }
+}
+
+.ReactModal__Overlay {
+  @include flex-center-column;
+}
+
+.modal-edit {
+  width: 50%;
+  height: 70%;
+  background-color: $light-teal;
+  border: solid $mid-grey 1px;
+  border-radius: 2px;
+  display: grid;
+  grid-template-columns: 60% 40%;
+  grid-template-rows: 10% 10% 70% 10%;
+  img {
+    grid-row: 1/2;
+    grid-column: 1/3;
+    height: 80%;
+    margin: 0.3rem 0.3rem 0 0;
+    justify-self: end;
+  }
+  h2 {
+    grid-row: 2/3;
+    grid-column: 1/3;
+    font-size: 2rem;
+    font-family: Muli;
+    @include grid-center;
+  }
+  form {
+    grid-row: 3/4;
+    grid-column: 1/2;
+    @include grid-center;
+    width: 90%;
+    label,
+    input,
+    select,
+    option {
+      width: 100%;
+      height: 1.5rem;
+      font-size: 1rem;
+      font-family: Muli;
+    }
+    label {
+      margin-top: 0.5rem;
+    }
+    #submit {
+      margin-top: 1rem;
+      height: 2rem;
+      color: white;
+      background-color: teal;
+    }
+  }
+  .old-data {
+    grid-row: 3/4;
+    grid-column: 2/3;
+    @include grid-center;
+    h3 {
+      width: 100%;
+      font-size: 1.2rem;
+      font-family: Muli;
+      font-color: $dark-grey;
+      margin-bottom: 1rem;
+      font-weight: bold;
+    }
+    h4 {
+      width: 100%;
+      font-size: 1rem;
+      font-family: Muli;
+      font-color: $dark-grey;
+      margin-bottom: 0.5rem;
+    }
+    p {
+      text-align: right;
+      color: red;
+      margin-bottom: 0.8rem;
+    }
+  }
+  button {
+    grid-row: 4/5;
+    grid-column: 1/3;
+    @include grid-center;
+    width: 40%;
+    height: 2rem;
+    background-color: red;
+    color: white;
+  }
+}
+
+.add-assignments {
+  @include fill;
+  @include flex-top-column;
+  h1 {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    font-size: 2rem;
+    font-family: Muli;
+    color: $dark-grey;
+    text-shadow: -1px -1px 0 white, 1px -1px 0 white, -1px 1px 0 white,
+      1px 1px 0 white;
+  }
+  p {
+    font-size: 1rem;
+    font-family: Muli;
+    color: $dark-grey;
+  }
+}
+
+.add-form-container {
+  width: 90%;
+  height: auto;
+  display: grid;
+  grid-template-columns: 16% 16% 16% 16% 16% 16%;
+  grid-template-rows: 15% 85%;
+  #col1row1 {
+    grid-row: 1/2;
+    grid-column: 1/2;
+    @include fill;
+    text-align: center;
+    @include grid-center;
+  }
+  #col2row1 {
+    grid-row: 1/2;
+    grid-column: 2/3;
+    @include fill;
+    text-align: center;
+    @include grid-center;
+  }
+  #col3row1 {
+    grid-row: 1/2;
+    grid-column: 3/4;
+    @include fill;
+    text-align: center;
+    @include grid-center;
+  }
+  #col4row1 {
+    grid-row: 1/2;
+    grid-column: 4/5;
+    @include fill;
+    text-align: center;
+    @include grid-center;
+  }
+  #col5row1 {
+    grid-row: 1/2;
+    grid-column: 5/6;
+    @include fill;
+    text-align: center;
+    @include grid-center;
+  }
+  #col6row1 {
+    grid-row: 1/2;
+    grid-column: 6/7;
+    @include fill;
+    text-align: center;
+    @include grid-center;
+  }
+  form {
+    grid-row: 2/3;
+    grid-column: 1/end;
+    margin-top: 1rem;
+    @include fill;
+    display: grid;
+    grid-template-columns: 16% 16% 16% 16% 16% 16%;
+    grid-template-rows: 20% 20% 20% 20% 20%;
+    input,
+    select {
+      height: 3rem;
+      width: 100%;
+      font-size: 1rem;
+      font-family: Muli;
+    }
+    #submit {
+      grid-row: 6/7;
+      grid-column: 1/7;
+      width: 80%;
+      @include grid-center;
+      height: 3rem;
+      background-color: teal;
+      color: white;
+      font-size: 1.5rem;
+    }
+  }
+}
+
+#confirmation {
+  background-color: transparent;
+  margin-top: 5rem;
+  font-size: 1.5rem;
+  color: white;
+}
+
+.data-container {
+  @include fill;
+  @include flex-top-column;
+  h1 {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    font-size: 2rem;
+    font-family: Muli;
+    color: $dark-grey;
+    text-shadow: -1px -1px 0 white, 1px -1px 0 white, -1px 1px 0 white,
+      1px 1px 0 white;
+  }
+  .data-buttons {
+    @include flex-center-row;
+    width: 100%;
+    button {
+      margin: 0rem 0.5rem;
+      background-color: teal;
+      width: 8rem;
+      height: 2rem;
+      color: white;
+      font-size: 0.8rem;
+      font-family: Muli;
+    }
+  }
+  .graph-container {
+    margin-top: 2rem;
+    width: 90%;
+    height: 65%;
+    canvas {
+      width: 100%;
+      height: 90%;
+    }
+    img {
+      margin-top: 1rem;
+      width: 40%;
+    }
+    h2 {
+      font-size: 2rem;
+      font-family: Muli;
+      color: $dark-grey;
+    }
+  }
+}
+canvas {
+  width: 500px;
+  height: 300px;
+}
+
+#classwork,
+#homework,
+#assessments,
+#projects {
+  canvas {
+    width: 100%;
+    height: 90%;
+  }
+}
+
+.goals-container {
+  @include fill;
+  display: grid;
+  grid-template-rows: 15% 85%;
+  grid-template-columns: 45% 55%;
+  .goals-dashboard {
+    grid-row: 1/2;
+    grid-column: 1/3;
+    display: grid;
+    grid-template-rows: 40% 60%;
+    grid-template-columns: 80% 20%;
+    background-color: teal;
+    h1 {
+      grid-row: 1/2;
+      grid-column: 1/3;
+      margin-top: 1rem;
+      margin-bottom: 0.5rem;
+      font-size: 2rem;
+      font-family: Muli;
+      color: $dark-grey;
+      text-shadow: -1px -1px 0 white, 1px -1px 0 white, -1px 1px 0 white,
+        1px 1px 0 white;
+      @include grid-center;
+    }
+    .current-goals {
+      grid-row: 2/3;
+      grid-column: 1/2;
+      @include flex-start-row;
+      h2 {
+        font-size: 1.3rem;
+        font-family: Muli;
+        color: white;
+        margin-left: 2rem;
+      }
+      button {
+        width: 15%;
+        height: 70%;
+        border-radius: 5px;
+        color: $dark-grey;
+        font-family: Muli;
+        font-size: 0.8rem;
+        margin: 0rem 0.5rem;
+      }
+    }
+    #add {
+      grid-row: 2/3;
+      grid-column: 2/3;
+      width: 90%;
+      height: 80%;
+      @include grid-center;
+      background-color: $mid-grey;
+      color: white;
+      font-size: 1.3rem;
+      font-family: Muli;
+    }
+  }
+  .goal-view {
+    grid-row: 2/3;
+    grid-column: 1/2;
+    background-color: $teal;
+    .goal-display {
+      @include flex-top-column;
+      h1 {
+        font-size: 1.5rem;
+        font-family: Muli;
+        color: $dark-grey;
+        margin: 1rem 0rem;
+      }
+      h2 {
+        width: 85%;
+        font-size: 1rem;
+        font-family: Muli;
+        color: $dark-grey;
+        margin: 0.3rem 0.3rem;
+        text-align: left;
+      }
+      p {
+        width: 80%;
+        font-size: 1rem;
+        font-family: Muli;
+      }
+      div {
+        margin-top: 1rem;
+        width: 85%;
+        height: 8vh;
+        background-color: white;
+        border: solid $dark-grey 1px;
+      }
+      .goal-reflection {
+        height: 12vh;
+        @include flex-top-column;
+        form {
+          @include flex-top-column;
+          label {
+            font-size: 1rem;
+            font-family: Muli;
+            color: $dark-grey;
+            margin: 0.3rem 0.3rem;
+          }
+          textarea {
+            width: 95%;
+            height: 6vh;
+          }
+          input {
+            width: 95%;
+            background-color: teal;
+            color: white;
+            font-family: Muli;
+          }
+        }
+        p {
+          margin: 0.5rem 0.5rem;
+        }
+      }
+      button {
+        width: 30%;
+        margin-top: 1rem;
+        background-color: red;
+        color: white;
+        font-family: Muli;
+      }
+    }
+    .goal-add {
+      @include fill;
+      @include flex-top-column;
+      h1 {
+        font-size: 1.5rem;
+        font-family: Muli;
+        color: $dark-grey;
+        margin: 0.5rem 0rem;
+      }
+      form {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+        width: 90%;
+        label {
+          width: 100%;
+          font-size: 1rem;
+          font-family: Muli;
+          color: $dark-grey;
+          margin: 0.2rem 0rem;
+          display: flex;
+          flex-direction: column;
+          justify-content: flex-start;
+          span {
+            font-size: 0.8rem;
+            color: black;
+          }
+        }
+        input {
+          width: 100%;
+          height: 2rem;
+        }
+        textarea {
+          width: 100%;
+          height: 2rem;
+        }
+        select {
+          width: 100%;
+          height: 1.5rem;
+        }
+        #save {
+          margin-top: 0.5rem;
+          background-color: teal;
+          color: white;
+        }
+      }
+    }
+  }
+  .data {
+    grid-row: 2/3;
+    grid-column: 2/3;
+    background-color: $light-teal;
+    .graph-container {
+      margin: 0.5rem 0.5rem;
+      width: 90%;
+      height: 60vh;
+    }
+    img {
+      width: 40%;
+    }
+  }
+}
+
+//Teacher Section Styling
+
+.teacher {
+  width: 100vw;
+  height: 100vh;
+  box-sizing: border-box;
+  display: grid;
+  grid-template-rows: 17% 83%;
+  grid-template-columns: 25% 75%;
+  .header {
+    grid-row: 1/2;
+    grid-column: 1/3;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    background-color: $mid-grey;
+    a {
+      height: 100%;
+      width: auto;
+      text-align: center;
+      img {
+        height: 100%;
+      }
+    }
+  }
+}
+
+#logo {
+  margin-left: 5rem;
+}
+
+#logout {
+  font-size: 1.3rem;
+  color: black;
+  font-family: Muli;
+  margin-right: 5rem;
+  @include flex-center-column;
+}
+
+.dashboard-teacher {
+  grid-row: 2/3;
+  grid-column: 1/2;
+  background-color: $light-grey;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  img {
+    width: 50%;
+    height: auto;
+    margin-top: 2rem;
+  }
+  h1 {
+    font-size: 1.5rem;
+    font-family: Muli;
+    margin-top: 1rem;
+    color: $dark-grey;
+  }
+  form {
+    margin-top: 2rem;
+    width: 80%;
+    @include flex-top-column;
+    label {
+      font-size: 1rem;
+      font-family: Muli;
+      margin-top: 1.5rem;
+      margin-bottom: 0.5rem;
+      color: $dark-grey;
+    }
+    select {
+      width: 70%;
+      height: 2rem;
+      font-size: 1rem;
+      font-family: Muli;
+    }
+  }
+}
+
+.display-teacher {
+  grid-row: 2/3;
+  grid-column: 2/3;
+  @include fill;
+  background-color: $teal;
+  display: grid;
+  grid-template-rows: 100%;
+  grid-template-columns: 50% 50%;
+  #goal-teacher {
+    grid-row: 1/2;
+    grid-column: 1/2;
+    @include fill;
+  }
+  #data-teacher {
+    grid-row: 1/2;
+    grid-column: 2/3;
+    @include fill;
+  }
+}
+
+.goal-teacher-display {
+  display: grid;
+  @include fill;
+  grid-template-rows: 20% 80%;
+  grid-template-columns: 100%;
+  .goal-menu {
+    grid-row: 1/2;
+    grid-column: 1/2;
+    background-color: teal;
+    @include fill;
+    display: grid;
+    grid-template-rows: 20% 80%;
+    grid-template-columns: 100%;
+    h2 {
+      grid-row: 1/2;
+      grid-column: 1/2;
+      width: 100%;
+      text-align: center;
+      font-size: 1.3rem;
+      font-family: Muli;
+      color: white;
+      margin-top: 0.5rem;
+    }
+    .button-container {
+      grid-row: 2/3;
+      grid-column: 1/2;
+      display: flex;
+      flex-flow: row wrap;
+      justify-content: center;
+      align-items: center;
+      button {
+        width: 40%;
+        height: 30%;
+        border-radius: 5px;
+        color: $dark-grey;
+        font-family: Muli;
+        font-size: 0.8rem;
+        margin: 0rem 0.5rem;
+      }
+    }
+  }
+  .goal-teacher-view {
+    grid-row: 2/3;
+    grid-column: 1/2;
+    @include fill;
+    .goal-display-teacher {
+      @include flex-top-column;
+      h1 {
+        font-size: 1.5rem;
+        font-family: Muli;
+        color: $dark-grey;
+        margin: 0.5rem 0rem;
+      }
+      h2 {
+        width: 85%;
+        font-size: 1rem;
+        font-family: Muli;
+        color: $dark-grey;
+        margin: 0.3rem 0.3rem;
+        text-align: left;
+      }
+      p {
+        width: 80%;
+        font-size: 1rem;
+        font-family: Muli;
+      }
+      div {
+        margin-top: 1rem;
+        width: 85%;
+        height: 6vh;
+        background-color: white;
+        border: solid $dark-grey 1px;
+        p {
+          margin: 0.5rem;
+        }
+      }
+      .goal-comment {
+        height: 15vh;
+        @include flex-top-column;
+        form {
+          @include flex-top-column;
+          label {
+            font-size: 1rem;
+            font-family: Muli;
+            color: $dark-grey;
+            margin: 0.3rem 0.3rem;
+          }
+          textarea {
+            width: 95%;
+            height: 6vh;
+          }
+          input {
+            width: 95%;
+            background-color: teal;
+            color: white;
+            font-family: Muli;
+          }
+        }
+        p {
+          margin: 0.5rem 0.5rem;
+        }
+      }
+      button {
+        width: 30%;
+        margin-top: 1rem;
+        background-color: red;
+        color: white;
+        font-family: Muli;
+      }
+    }
+  }
+}
+
+.data-teacher-display {
+  display: grid;
+  @include fill;
+  grid-template-rows: 20% 80%;
+  grid-template-columns: 100%;
+  .data-menu {
+    grid-row: 1/2;
+    grid-column: 1/2;
+    background-color: $light-grey;
+    @include fill;
+    display: grid;
+    grid-template-rows: 20% 80%;
+    grid-template-columns: 100%;
+    h2 {
+      grid-row: 1/2;
+      grid-column: 1/2;
+      width: 100%;
+      text-align: center;
+      font-size: 1.3rem;
+      font-family: Muli;
+      color: white;
+      margin-top: 0.5rem;
+    }
+    .button-container {
+      grid-row: 2/3;
+      grid-column: 1/2;
+      display: flex;
+      flex-flow: row wrap;
+      justify-content: center;
+      align-items: center;
+      button {
+        width: 40%;
+        height: 20%;
+        border-radius: 5px;
+        color: $dark-grey;
+        font-family: Muli;
+        font-size: 0.8rem;
+        margin: 0rem 0.5rem;
+      }
+    }
+  }
+  .teacher-data-view {
+    grid-row: 2/3;
+    grid-column: 1/2;
+    @include grid-center;
+    width: 90%;
+    height: 90%;
+    .graph-container {
+      width: 90%;
+      height: 50vh;
+      img {
+        width: 50%;
+      }
+    }
+  }
+}
+
+.hidden {
+  display: none;
+}
+
+@media only screen and (max-width: 500px) {
+  .landing {
+    height: 200vh;
+    grid-template-rows: 10% 10% 10% 70%;
+    grid-template-columns: 100%;
+  }
+
+  .teacher-demo,
+  .student-demo {
+    button {
+      width: 70%;
+      height: 40%;
+    }
+  }
+
+  .teacher-demo {
+    grid-row: 1/2;
+    grid-column: 1/2;
+  }
+
+  .student-demo {
+    grid-row: 3/4;
+    grid-column: 1/2;
+  }
+
+  .logo {
+    grid-row: 2/3;
+    grid-column: 1/2;
+    @include flex-center-column;
+    h1 {
+      font-size: 1.4rem;
+    }
+    img {
+      height: 50%;
+    }
+  }
+
+  .about {
+    grid-row: 4/5;
+    grid-column: 1/2;
+    grid-template-columns: 100%;
+    grid-template-rows: 33.33% 33.33% 33.33%;
+    .smartgoals-image,
+    .smartgoals-info {
+      grid-row: 1/2;
+      grid-column: 1/2;
+      height: 98%;
+      width: 98%;
+      @include grid-center;
+    }
+    .datatracking-image,
+    .datatracking-info {
+      grid-row: 2/3;
+      grid-column: 1/2;
+      height: 98%;
+      width: 98%;
+      @include grid-center;
+    }
+    .future-image,
+    .future-info {
+      grid-row: 3/4;
+      grid-column: 1/2;
+      height: 98%;
+      width: 98%;
+      @include grid-center;
+    }
+  }
+
+  .smartgoals-image,
+  .datatracking-image,
+  .future-image {
+    img {
+      width: 60%;
+    }
+  }
+
+  .smartgoals-info,
+  .datatracking-info,
+  .future-info {
+    h1 {
+      font-size: 2rem;
+      padding-top: 0.4rem;
+      margin-top: 0.8rem;
+    }
+    ul {
+      width: 80%;
+      height: 85%;
+
+      li {
+        font-size: 0.8rem;
+      }
+    }
+  }
+
+  .ReactModal__Overlay {
+    @include flex-center-column;
+  }
+
+  .modal {
+    width: 90%;
+    height: 50%;
+  }
+
+  //Student Section Styling
+
+  .student {
+    grid-template-rows: 12% 20% 73%;
+    grid-template-columns: 100%;
+    .header {
+      grid-column: 1/2;
+    }
+  }
+
+  #logo {
+    margin-left: 1rem;
+  }
+
+  #logout {
+    margin-right: 1rem;
+  }
+
+  .dashboard {
+    grid-row: 2/3;
+    grid-column: 1/2;
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: flex-start;
+    align-items: center;
+
+    img {
+      width: 17%;
+      margin: 0.5rem;
+    }
+    h1 {
+      font-size: 1rem;
+      margin: 0.5rem;
+    }
+    button {
+      width: 30%;
+      height: 3rem;
+      margin: 0.5rem;
+      font-size: 0.7rem;
+    }
+  }
+
+  .display {
+    grid-row: 3/4;
+    grid-column: 1/2;
+  }
+
+  .see-assignments {
+    .assignment-container {
+      width: 100%;
+      .assignment-object,
+      .assignment-header {
+        width: 100%;
+        height: 2rem;
+
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6,
+        p,
+        button {
+          font-size: 0.3rem;
+        }
+      }
+    }
+  }
+
+  .assignment-key {
+    img {
+      margin-top: 1rem;
+    }
+  }
+
+  .modal-edit {
+    width: 97%;
+    height: 80%;
+
+    .old-data {
+      h3 {
+        margin-top: 0.6rem;
+        font-size: 1rem;
+      }
+      h4 {
+        margin-bottom: 0.2rem;
+      }
+      p {
+        margin-bottom: 0.8rem;
+        margin-right: 0.4rem;
+      }
+    }
+  }
+
+  .add-assignments {
+    p {
+      font-size: 0.25rem;
+    }
+  }
+
+  .add-form-container {
+    width: 98%;
+
+    form {
+      input,
+      select {
+        border: solid black 1px;
+        height: 2rem;
+        width: 90%;
+        font-size: 0.4rem;
+        background-color: white;
+      }
+    }
+  }
+
+  .data-container {
+    .data-buttons {
+      display: flex;
+      flex-flow: row wrap;
+      justify-content: center;
+      align-items: center;
+
+      button {
+        margin: 0.3rem 0.5rem;
+        width: 5rem;
+        height: 2rem;
+        font-size: 0.3rem;
+      }
+    }
+    .graph-container {
+      height: 50%;
+      canvas {
+        height: 80%;
+      }
+    }
+  }
+
+  .goals-container {
+    height: 160%;
+    grid-template-rows: 20% 70% 70%;
+    grid-template-columns: 100%;
+    .goals-dashboard {
+      grid-row: 1/2;
+      grid-column: 1/2;
+
+      .current-goals {
+        h2 {
+          font-size: 0.6rem;
+          margin-left: 0.5rem;
+        }
+        button {
+          width: 30%;
+          height: 30%;
+
+          font-size: 0.6rem;
+          margin: 0.5rem 0.5rem;
+        }
+      }
+      #add {
+        font-size: 0.8rem;
+      }
+    }
+    .goal-view {
+      grid-row: 2/3;
+      grid-column: 1/2;
+      .goal-display {
+        h1 {
+          font-size: 1.3rem;
+        }
+        h2 {
+          font-size: 0.9rem;
+        }
+        p {
+          font-size: 0.8rem;
+        }
+
+        .goal-reflection {
+          height: 16vh;
+
+          form {
+            textarea {
+              border: solid black 1px;
+            }
+          }
+        }
+      }
+      .goal-add {
+        form {
+          input {
+            border: solid black 1px;
+          }
+          textarea {
+            border: solid black 1px;
+          }
+          select {
+            border: solid black 1px;
+          }
+        }
+      }
+    }
+    .data {
+      grid-row: 3/4;
+      grid-column: 1/2;
+    }
+  }
+
+  //Teacher Section Styling
+
+  .teacher {
+    grid-template-rows: 12% 20% 78%;
+    grid-template-columns: 100%;
+    .header {
+      grid-column: 1/2;
+    }
+  }
+
+  .dashboard-teacher {
+    grid-row: 2/3;
+    grid-column: 1/2;
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: flex-start;
+    align-items: center;
+    img {
+      width: 20%;
+      margin: 0.5rem;
+    }
+    h1 {
+      font-size: 1rem;
+
+      margin: 0.5rem;
+    }
+    form {
+      margin-top: 0rem;
+      width: 70%;
+
+      label {
+        font-size: 0.8rem;
+
+        margin-top: 1rem;
+      }
+      select {
+        border: solid black 1px;
+        background-color: white;
+        width: 70%;
+        height: 1.3rem;
+        font-size: 0.8rem;
+      }
+    }
+  }
+
+  .display-teacher {
+    grid-row: 3/4;
+    grid-column: 1/2;
+    height: 150%;
+    grid-template-rows: 90% 80%;
+    grid-template-columns: 100%;
+    #goal-teacher {
+      grid-row: 1/2;
+      grid-column: 1/2;
+    }
+    #data-teacher {
+      grid-row: 2/3;
+      grid-column: 1/2;
+    }
   }
 }

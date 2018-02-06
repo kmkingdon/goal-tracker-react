@@ -1,7 +1,5 @@
 import React from 'react';
 import Header from '../header.js';
-import '../style/reset.css';
-import '../style/student.css';
 import GoalSection from './goalsection';
 import DataSection from './datasection';
 
