@@ -1203,6 +1203,7 @@ canvas {
   .dashboard {
     grid-row: 2/3;
     grid-column: 1/2;
+    width: 100%;
     display: flex;
     flex-flow: column wrap;
     justify-content: flex-start;
@@ -1215,7 +1216,7 @@ canvas {
       margin: 0.5rem; }
     .dashboard button {
       width: 30%;
-      height: 3rem;
+      height: 2.5rem;
       margin: 0.5rem;
       font-size: 0.7rem; }
 
